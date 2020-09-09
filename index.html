@@ -1,49 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>michaelseh.com</title>
-	<link href="favicon.ico" rel="shortcut icon">
-	<meta charset="utf-8">
-	<meta name="google-site-verification" content="DBu7YuebNyCox5Q7GwYcCVRQOqnqjzRZgYtz2mdvnD8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<style>
-	   	ul {
-	       	margin:0;
-	       	padding:0;
-	       	text-align: center;
-	       	list-style:none;  
-	       	font-size:20px;              
-	   	}
-	   	ul  li {
-	       	padding: 2px 5px;               
-	   	}
-	   	h1 	{text-align: center;}
-		p 	{text-align: center;}
-		div {text-align: center;}
-	</style>
+  <title>MICHAEL'S BUCKET LIST</title>
+  <meta charset="utf-8">
+  <meta content="lQSHebYmnNPc4so9n08Wf4poxAC7iwNC59Vi-pCPeJo" name="google-site-verification">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" name="viewport">
+  <link href="MICHAEL%20SEH_files/index.css" rel="stylesheet">
+  <script>
+   window._wq = window._wq || [];
+   _wq.push({
+    id: "_all",
+    options: {
+      fullscreenOnRotateToLandscape: true
+    }
+   });
+  </script>
 </head>
-<body>
-	<h1>Michael's Bucket List</h1>
-	<p><a href="https://michaelseh.xyz/">⌂</a></p>
-	<ul>
-		<li>-build a mud hut</li>
-		<li>-eat pasta in italy</li>
-		<li>-handshake with keira knightley</li>
-		<li>-live in a studio apartment</li>
-		<li>-teach art to kids</li>
-		<li>-steal my childhood street sign</li>
-		<li>-take a photo of a galápagos tortoise</li>
-		<li>-free diving in antarctica</li>
-		<li>-be my grandpa's last opponent in ping pong</li>
-		<li>-walk the runway at paris fashion week</li>
-		<li>-run nyc marathon</li>
-		<li>-backpack trans catalina trail</li>
-		<li>-hang with the locals in berlin</li>
-		<li>-write a book</li>
-		<li>-grad school</li>
-		<li>-adopt a dog</li>
-		<li>-meditate in a monastery</li>
-		<li>-billboard advertisement</li>
-	</ul>
+<body class="michael__home">
+  <div class="nav__container">
+    <div class="mobile_trigger mobile-only">
+      <a href=""><span class="mobile_trigger--off">Menu</span><span class="mobile_trigger--on">x</span></a>
+    </div>
+    <nav class="nav">
+      <a href="https://michaelseh.xyz" target="_blank">Work</a>
+    </nav>
+  </div>
+  <script>
+   document.querySelector('.mobile_trigger a').addEventListener('click', function(e) {
+    e.preventDefault()
+    var classes = document.querySelector('body').className.split(' ')
+    if (classes.indexOf('mobile_menu--on') >= 0) {
+      var newClasses = []
+      var i
+      var len = classes.length
+      for(i = 0; i < len; i++) {
+        if (classes[i] !== 'mobile_menu--on') newClasses.push(classes[i])
+      }
+      document.querySelector('body').className = newClasses.join(' ')
+    } else {
+      document.querySelector('body').className = classes.join(' ') + ' mobile_menu--on'
+    }
+   })
+  </script>
+  <div class="pageWrapper">
+    <div class="main__container">
+      <div class="wrapper main">
+        <section class="post-11">
+          <script async src="MICHAEL%20SEH_files/ay5f9gy2t8.js">
+          </script> 
+          <script async src="MICHAEL%20SEH_files/E-v1.js">
+          </script>
+          <article class="article article--image article--image_street">
+            <div class="image__container"></div>
+            <h4>MICHAEL'S BUCKET LIST<br>
+            <br>
+            -build a mud hut<br>
+            -eat pasta in italy<br>
+            -live in a studio apartment<br>
+            -teach art to kids<br>
+            -steal my childhood street sign<br>
+            -take a photo of a galápagos tortoise<br>
+            -free diving in antarctica<br>
+            -run nyc marathon<br>
+            -backpack trans catalina trail<br>
+            -hang with the locals in berlin<br>
+            -write a book<br>
+            -grad school<br>
+            -adopt a dog<br>
+            -meditate in a monastery<br>
+            -billboard advertisement<br></h4>
+            <script src="MICHAEL%20SEH_files/jquery.js">
+            </script> 
+            <script src="MICHAEL%20SEH_files/app.js">
+            </script>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
