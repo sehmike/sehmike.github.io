@@ -204,8 +204,8 @@ body {
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.2;
-	color: #FFFAFA;
-	background-color: #033D8F;
+	color: #808080;
+	background-color: #FFFFFF;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
@@ -303,7 +303,7 @@ body.home {
 	line-height: 1.7;
 }
 .main__container .main section article h4 a {
-	color: #FFFFFF text-decoration: none;
+	color: #808080 text-decoration: none;
 }
 .main__container .main section article .image__container {
 	padding: 0 2rem;
@@ -556,7 +556,7 @@ body.mobile_menu--on .nav__container .mobile_trigger--on {
 	margin: 0 0 1rem;
 	padding: 0;
 	font-size: .675rem;
-	color: #FFFAFA;
+	color: #808080;
 	text-transform: uppercase;
 }
 .nav__container a:last-child {
