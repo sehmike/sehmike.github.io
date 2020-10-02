@@ -7,6 +7,57 @@
   <meta content="DBu7YuebNyCox5Q7GwYcCVRQOqnqjzRZgYtz2mdvnD8" name="google-site-verification">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, viewport-fit=cover" name="viewport">
   <link href="MICHAEL%20SEH_files/index.css" rel="stylesheet">
+  <style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
   <script>
      window._wq = window._wq || [];
      _wq.push({
@@ -53,7 +104,43 @@
           </script>
           <article class="article article--image article--image_street">
             <div class="image__container"></div>
-            <h4><img alt="" height="320" src="chaos-reduc.png" width="200"><br>
+            <h4><div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="chaos-reduc.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="bob.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="asd.jpg" style="width:100%">
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+</div><br>
             <br>
             Michael James Seh<br>
             (b.2000)<br>
