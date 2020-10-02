@@ -15,7 +15,7 @@ img {vertical-align: middle;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 300px;
   position: relative;
   margin: auto;
 }
@@ -29,15 +29,6 @@ img {vertical-align: middle;}
   bottom: 8px;
   width: 100%;
   text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
 }
 
 
@@ -54,12 +45,12 @@ img {vertical-align: middle;}
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 1} 
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: 1} 
   to {opacity: 1}
 }
 
@@ -70,46 +61,12 @@ img {vertical-align: middle;}
 </style>
 </head>
 <body>
-
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <img src="chaos-reduc.png" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="bob.jpeg" style="width:100%">
-</div>
-
-<div class="mySlides fade">
-  <img src="asd.jpeg" style="width:100%">
-</div>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-</div>
- <script>
-     window._wq = window._wq || [];
-     _wq.push({
-      id: "_all",
-      options: {
-        fullscreenOnRotateToLandscape: true
-      }
-     });
-  </script>
-</head>
-<body class="michael__home">
-  <div class="nav__container">
+ <div class="nav__container">
     <div class="mobile_trigger mobile-only">
       <a href=""><span class="mobile_trigger--off">INFO</span><span class="mobile_trigger--on">x</span></a>
     </div>
     <nav class="nav">
-      <a href="https://michaelseh.xyz" target="_blank">WORK</a> <a href="https://michaelseh.xyz/Curriculum_Vitae_Seh_Michael.pdf" target="_blank">CV</a>
+      <a href="https://michaelseh.xyz/" target="_blank">WORK</a> <a href="https://michaelseh.xyz/Curriculum_Vitae_Seh_Michael.pdf" target="_blank">CV</a>
     </nav>
   </div>
   <script>
@@ -128,6 +85,66 @@ img {vertical-align: middle;}
         document.querySelector('body').className = classes.join(' ') + ' mobile_menu--on'
       }
      })
+  </script>
+<div class="pageWrapper">
+    <div class="main__container">
+      <div class="wrapper main">
+        <section class="post-11">
+          <script async src="/web/20201002054437js_/https://michaelseh.com/MICHAEL%20SEH_files/ay5f9gy2t8.js">
+          </script> 
+          <script async src="/web/20201002054437js_/https://michaelseh.com/MICHAEL%20SEH_files/E-v1.js">
+          </script>
+          <article class="article article--image article--image_street">
+            <div class="image__container"></div>
+            <h4><br>
+            <br>
+            Michael James Seh<br>
+            (b.2000)<br>
+            lives and works in Los Angeles<br>
+            <br>
+            2022 Bachelor of Arts, UCLA 
+<br><br><br><br><br><br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Guillotine/Guillotine.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Black-Ops-II/c_usa_hudson_afghanistan_head_c.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Black-Ops-II/c_rus_afghanistan_russian_head_c.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Black-Ops-II/c_mul_menendez2025_head_c.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Black-Ops-II/c_afr_children_head_c.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Black-Ops-II/c_usa_navy_head2_c.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com//images-compressed/Hero/Hero.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com///images-compressed/Bandz-a-Make-Her-Dance/Bandz-a-Make-Her-Dance(1).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com///images-compressed/Bandz-a-Make-Her-Dance/Bandz-a-Make-Her-Dance(2).jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="https://michaelseh.com///images-compressed/Mom/Mom.jpg" style="width:100%">
+</div>
   </script>
   <div class="pageWrapper">
     <div class="main__container">
@@ -156,9 +173,8 @@ function showSlides() {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 100); // Change image every 2 seconds
+  slides[slideIndex-1].style.display = "block"; 
+  setTimeout(showSlides, 160);
 }
 </script>
           </article>
