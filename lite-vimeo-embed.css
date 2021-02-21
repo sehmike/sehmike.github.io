@@ -33,8 +33,8 @@ lite-vimeo::after {
     padding-bottom: calc(100% / (16 / 9));
 }
 lite-vimeo > iframe {
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     position: absolute;
     top: 0;
     left: 0;
