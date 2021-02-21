@@ -181,14 +181,17 @@
 </head>
 <body>
     <br>
-				<div id="content">
-		<div id="Lightbox" class="modal">
-			<div class="content-atom">
-				<iframe class="thumb" id="sick" src="https://www.youtube-nocookie.com/embed/E8oHfnpguhA" frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen class="center"></iframe>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/E8oHfnpguhA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="center"></iframe> -->
+    <div class="content-line">
+			
+
+			<div class="content-atom" onclick='openImage("https://www.youtube-nocookie.com/embed/E8oHfnpguhA)'>
+				<iframe width="320" height="240"
+					srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto; cursor:pointer;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><img src=https://img.youtube.com/vi/iWxzv_yWtPM/0.jpg><span>▶</span>">
+				</iframe>
+				<div class="content-iframe"></div>
+				<figcaption>Clickies</figcaption>
 			</div>
-		</div>
     <br>
     <div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;">STEREO AUDIO TRACK BY</a></div>
     <div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;" href="https://jackilgore.com/" target="_blank">JACK KILGORE</a></div>
