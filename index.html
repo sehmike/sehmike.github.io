@@ -1,512 +1,70 @@
-<!-- Design of website forked from jasperspicero.com -->
-<!-- Thanks Jasper, and Jack for font-hack -->
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	<head>
-		<link rel="stylesheet" type="text/css"
-    	href="computer-modern/fonts.css">
-		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-		<title>Michael Seh</title>
-		<link href="favicon.ico" rel="shortcut icon">
-		<meta content="DBu7YuebNyCox5Q7GwYcCVRQOqnqjzRZgYtz2mdvnD8" name="google-site-verification">
-		<meta name="Author" content="Michael Seh">
-		<meta name="Description" content="Michael Seh, artist, videos, news, selected artworks ">
-		<style type="text/css"/>
-		html {
-    		-webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
-		}
-
-		
-		body{
-			font-family: "Computer Modern Serif", sans-serif;
-			background-color:#E0D8C9;
-			margin: 0;
-			padding-top:10px;
-			padding-bottom:10px;
-			padding-left:10px;
-			padding-right:10px;
-		}
-		
-		img{
-		border-top:1px solid black;
-		}
-		
-		h1 {
-            display:none;
-			font-weight:200;
-			position:absolute;
-			margin-left:10px;
-			font-family:arial;
-			font-size:14px;
-			color:black;
-		}
-		
-		#title{
-			text-align:center;
-			border-bottom:1px solid black;
-			padding-bottom: 10px;
-		}
-		
-		.title{
-			font-family: arial;
-			font-size:40px;
-		}
-		
-
-		
-		#content{
-			margin-top:50px;
-			text-align:left;
-		}
-		
-		
-		.work{
-			width:550px;
-			margin-left:auto;
-			margin-right:auto;
-			margin-bottom:50px;
-			text-align:left;
-			font-size:13px;
-			border:solid black 1px;
-			background-color:white;
-		}
-		
-		.work2{
-			width:550px;
-			margin-left:auto;
-			margin-right:auto;
-			margin-bottom:50px;
-			text-align:left;
-			font-size:14px;
-			border:solid black 1px;
-            color:black;
-		}
-		
-		.titles{
-			margin-left:2px;
-			font-size:14px;
-		}
-		
-		.titles2{
-			margin-left:2px;
-			font-size:14px;
-			margin-bottom:0px;
-			margin-top:0px;
-		}
-		
-		.titles3{
-			margin-left:2px;
-			font-size:14px;
-		}
-		
-		.location{
-			font-size:13px;
-			margin-left:2px;
-		}
-		
-		.location2{
-			font-size:13px;
-			margin-left:2px;
-			margin-top:1px;
-			margin-bottom:1px;
-		}
-		
-		.bottom{
-		font-size:13px;
-		margin-left:2px;
-		margin-top:0px;
-		margin-bottom:1px;
-		}
-		
-		@-moz-document url-prefix() {
-		
-		.titles3{
-			margin-left:2px;
-			font-size:14px;
-			margin-top:0px;
-		}
-		
-		.titles2{
-			margin-left:2px;
-			font-size:14px;
-			margin-top:3px;
-			margin-bottom:0px;
-		}
-		
-		.location2{
-			font-size:13px;
-			margin-left:2px;
-			margin-top:2px;
-			margin-bottom:0px;
-		}
-		.work2{
-			width:550px;
-			margin-left:auto;
-			margin-right:auto;
-			margin-bottom:50px;
-			padding-top:0px;
-			text-align:left;
-			font-size:13px;
-			border:solid black 1px;
-			background-color:black;
-            color:black;
-		}
-		.work{
-			width:550px;
-			margin-left:auto;
-			margin-right:auto;
-			margin-bottom:50px;
-			padding-top:2px;
-			text-align:left;
-			font-size:13px;
-			border:solid black 2px;
-			background-color:white;
-		}
-		}
-		
-		#footer{
-			text-align:center;
-			font-family: "Computer Modern Serif", sans-serif;
-			font-size:14px;
-			border-top:0px solid white;
-			padding-top:5px;
-		}
-
-			.star{
-		left:2px;
-		position:relative;
-		bottom:1px;
-		font-size:9px;
-		}
-		
-		.star2{
-		position:relative;
-		left:2px;
-		bottom:1px;
-		font-size:9px;
-		}
-	</style>
-		
-<script type="text/javascript">
-		
-		window.onload = init;
-		 
-		function init() {
-		  disableDraggingFor(document.getElementById("drag"));
-		}
-		 
-		function disableDraggingFor(element) {
-		  // this works for FireFox and WebKit in future according to http://help.dottoro.com/lhqsqbtn.php
-		  element.draggable = false;
-		  // this works for older web layout engines
-		  element.onmousedown = function(event) {
-						event.preventDefault();
-						return false;
-					  };
-		}
-		
-		var one_day=1000*60*60*24
-		var one_month=1000*60*60*24*30
-		var one_year=1000*60*60*24*30*12
-		
-		function displayage(yr, mon, day, unit, decimal, round){
-		today=new Date()
-		var pastdate=new Date(yr, mon-1, day)
-		
-		var countunit=unit
-		var decimals=decimal
-		var rounding=round
-		
-		finalunit=(countunit=="days")? one_day : (countunit=="months")? one_month : one_year
-		decimals=(decimals<=0)? 1 : decimals*10
-		
-		if (unit!="years"){
-		if (rounding=="rounddown")
-		document.write(Math.floor((today.getTime()-pastdate.getTime())/(finalunit)*decimals)/decimals+" "+countunit)
-		else
-		document.write(Math.ceil((today.getTime()-pastdate.getTime())/(finalunit)*decimals)/decimals+" "+countunit)
-		}
-		else{
-		yearspast=today.getFullYear()-yr-1
-		tail=(today.getMonth()>mon-1 || today.getMonth()==mon-1 && today.getDate()>=day)? 1 : 0
-		pastdate.setFullYear(today.getFullYear())
-		pastdate2=new Date(today.getFullYear()-1, mon-1, day)
-		tail=(tail==1)? tail+Math.floor((today.getTime()-pastdate.getTime())/(finalunit)*decimals)/decimals : Math.floor((today.getTime()-pastdate2.getTime())/(finalunit)*decimals)/decimals
-		document.write(yearspast+tail+" "+countunit)
-		}
-		}
-	  
-	</script>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Michael Seh</title>
+<meta charset="utf-8">
+<link href="favicon.ico" rel="shortcut icon">
+<meta content="DBu7YuebNyCox5Q7GwYcCVRQOqnqjzRZgYtz2mdvnD8" name="google-site-verification">
+<meta name="Author" content="Michael Seh">
+<meta name="Description" content="Michael Seh, artist, videos, news, selected artworks">
+<link rel="stylesheet" type="text/css" href="resour/style.css">
+<script type="text/javascript" src="resour/jquery.js"></script>
+<meta name="Description" content="michaelseh, artist, believer in the internet">
+<meta name="viewport" content="width=device-width, initial-scale=.3">
 </head>
+<body>
+<div id="content">
 
-<body id="drag" >
-	<div id="content">
-		<h1>X.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Michael James Seh</b> <i style="font-size:12px;"> 
-		<span class="timer">
-		<script>
-		displayage(2000, 2, 16, "years", 0, "rounddown")
-		</script>
-		<script>
-		displayage(2000, 2, 16, "days", 0, "rounddown")
-		</script>    
-		old
-		</i>
-		</p>
-		<span class="location">artist, believer in the internet</span>
-		<a href="https://michaelseh.com//images-compressed/michael.jpg" class="transition">
-		<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/michael.jpg"/></a></span>
-		</div>
+<div id="header">
+<span id="logo">
+<h2><a href="index.html">Michael Seh<br>2022 UCLA Design | Media Arts, expected<br>2021-2022 Frankfurt a.M. Städelschule, upcoming</a></h2>
+</span>
 
-		<h1>0.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>rollingdownthehill.net</b> <i style="font-size:12px;">Ongoing</i></p>
-			<a target="_blank" href="https://rollingdownthehill.net" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Rolling-Down-The-Hill/rollingdownthehill-16.jpg"/></a></span>
-		</div>
 
-		<h1>1.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Dirty Work</b> <i style="font-size:12px;">In Progress</i></p>
-			<span class="location">Dirt on you, dirt on them.</span>
-			<a href="Dirty-Work.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Dirty-Work/0003.jpg"/></a></span>
-		</div>
-
-		<h1>2.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Toy Story video frames</b> <i style="font-size:12px;">2021</i></p>
-			<a href="Toy-Story.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Toy-Story/1st-videoframe-ToyStory1-Compressed.jpg"/></a></span>
-		</div>
-
-		<h1>3.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Black Forest Ham on Adidas Hamburg</b> <i style="font-size:12px;">2021</i></p>
-			<span class="location">Tutorial</span>
-			<a href="Black-Forest-Ham-on-Adidas-Hamburg.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Ham/Black-Forest-Ham-on-Adidas-Hamburg.jpg"/></a></span>
-		</div>
-
-		<h1>4.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Neo Yokio streaming above The Met Museum welcome desk</b> <i style="font-size:12px;">2021</i></p>
-			<span class="location">S01E02 A Pop Star of Infinite Elegance</span>
-			<a href="Neo-Yokio.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Neo-Yokio/TheMET-Museum-WelcomeDesk-Playing-NeoYokio-Compressed.jpg"/></a></span>
-		</div>
-
-		<h1>5.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Fearless</b> <i style="font-size:12px;">2021</i></p>
-			<span class="location">Singing Taylor's Version</span>
-			<a href="Fearless.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Fearless/Fearless.jpg"/></a></span>
-		</div>
-
-		<h1>6.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>NVIDIA Announces Representation of Michael Seh</b> <i style="font-size:12px;">2021</i></p>
-			<span class="location">Artnet News | The Global Art Market Newswire</span>
-			<a href="NVIDIA-Representation-Seh.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/NVIDIA-representation/Screenshot-2021-04-07-Artnet-News-The-Global-Art-Market-Newswire.jpg"/></a></span>
-		</div>
-
-		<h1>7.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Caterpillar to Butterfly</b> <i style="font-size:12px;">2021</i></p>
-			<a href="https://michaelseh.com//images-compressed/Caterpillar-to-Butterfly/Caterpillar-to-Butterfly-Web.jpg" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Caterpillar-to-Butterfly/Caterpillar-to-Butterfly-Web.jpg"/></a></span>
-		</div>
-
-		<h1>8.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Reign</b> <i style="font-size:12px;">2021</i></p>
-			<span class="location">Santa Barbara City College, Santa Barbara CA</span>
-			<a href="Reign.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Reign/Reign-Advert-Card-Comp.jpg"/></a></span>
-		</div>
-
-		<h1>9.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>tying a knot in lamps</b> <i style="font-size:12px;">2021</i></p>
-			<a href="tying-a-knot-in-lamps.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/tying-a-knot-in-lamps/view.jpg"/></a></span>
-		</div>
-
-		<h1>10.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Wow Effect</b> <i style="font-size:12px;">2021</i></p>
-			<a href="Wow-Effect.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Wow-Effect/wow-effect.jpg"/></a></span>
-		</div>
-
-		<h1>11.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>mark</b> <i style="font-size:12px;">2021</i></p>
-			<a href="mark.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/mark/squoosh/Poster_Mark_Invitation.jpg"/></a></span>
-		</div>
-
-		<h1>12.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Pennies</b> <i style="font-size:12px;">2021</i></p>
-			<a href="Pennies.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Pennies/Pennies.jpg"/></a></span>
-		</div>
-
-		<h1>13.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>PeopleSoft</b> <i style="font-size:12px;">2021</i></p>
-			<span class="location">Employee Profile Page</span>
-			<a target="_blank" href="https://peoplesoft.dev/" class="transition"><img width="550px;" style="margin-top:1px;" src="https://michaelseh.com//images-compressed/peoplesoft.dev/peoplesoft-logo.jpg"/></a></span>
-		</div>
-
-		<h1>14.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF" class="work2">
-			<p class="titles2"><b>Photograph the Wind</b> <i style="font-size:12px;">2021</i></p>
-			<a href="Photograph-the-Wind.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Photograph-the-Wind/Photograph-the-Wind-1.jpg"/></a></span>
-		</div>
-
-        <h1>15.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Behavior Management</b> <i style="font-size:12px;">2020</i></p>
-			<span class="location">The UC Berkeley Chapter of Phi Kappa Tau, Berkeley CA</span>
-			<a href="Behavior-Management.html" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Behavior-Management/How-am-I-doing-today.gif"/></a></span>
-		</div>
-
-		<h1>16.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>McDonald's Wi-Fi Portal</b> <i style="font-size:12px;">2020</i></p>
-			<a target="_blank" href="https://mcdonaldsinternet.com/" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/McDonalds-Internet/McDonalds-WiFi.jpg"/></a></span>
-		</div>
-
-		<h1>17.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Flower Mill</b> <i style="font-size:12px;">2020</i></p>
-			<span class="location">Montecito Drive, Glendale CA</span>
-			<a href="https://michaelseh.com/images-compressed/Flower-Mill/Flower-Mill.jpg" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com/images-compressed/Flower-Mill/Flower-Mill.jpg"/></a></span>
-		</div>
-	
-		<h1>18.<span class="star"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Checked Luggage</b> <i style="font-size:12px;">2020</i></p>
-			<a href="https://michaelseh.com//images-compressed/Checked-Luggage/Checked-Luggage.jpg" class="transition">
-			<img width="550px;" style="border-top:1px solid black;border-bottom:1px solid black;margin-top:2px;" src="https://michaelseh.com//images-compressed/Checked-Luggage/Checked-Luggage.jpg"/></a></span>
-		</div>
-		
-		<h1>19.<span class="star2"></span></h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Mercedes</b> <i style="font-size:12px;">2020</i></p>
-			<a href="https://michaelseh.com/images-compressed/Mercedes/Mercedes.jpg" class="transition">
-			<img width="550px;" style="border-top:1px solid black;border-bottom:1px solid black;margin-top:2px;" src="https://michaelseh.com//images-compressed/Mercedes/Mercedes.jpg"/></a></span>
-		</div>
-	
-        <h1>20.</h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-            <p class="titles2"><b>our teeth</b> <i style="font-size:12px;">2020</i></p>
-			<a href="https://michaelseh.com//images-compressed/our-teeth/our-teeth.jpg" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/our-teeth/our-teeth.jpg"/></a></span>
-        </div>
-            
-        <h1>21.<span class="star"></span></h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-            <p class="titles2"><b>Hero</b> <i style="font-size:12px;">2020</i></p>
-			<a href="https://michaelseh.com//images-compressed/Hero/Hero.jpg" class="transition">
-			<img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Hero/Hero.jpg"/></a></span>
-        </div>
-
-        <h1>22.<span class="star"></span></h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-            <p class="titles2"><b>Mariah</b> <i style="font-size:12px;">2020</i></p>
-			<a href="Mariah.html" class="transition"><img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Mariah/Mariah.jpg"/></a></span>
-        </div>
-
-		<h1>23.<span class="star"></span></h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Bandz a Make Her Dance</b> <i style="font-size:12px;">2020</i></p>
-			<a href="https://michaelseh.com///images-compressed/Bandz-a-Make-Her-Dance/Bandz-a-Make-Her-Dance(1).jpg" class="transition">
-			<img width="550px;" style="margin-top:1px;margin-bottom:0px;" src="https://michaelseh.com///images-compressed/Bandz-a-Make-Her-Dance/Bandz-a-Make-Her-Dance(1).jpg"/></a></span>
-		</div>
-
-    	<h1>24.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>minigun.live</b> <i style="font-size:12px;">2020</i></p>
-			<a target="_blank" href="https://minigun.live/" class="transition"><img width="550px;" style="margin-top:1px;" src="https://michaelseh.com//images-compressed/minigun-live/minigun-live.jpg"/></a></span>
-		</div>
-
-		<h1>25.<span class="star"></span></h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-            <p class="titles2"><b>Black Ops II</b> <i style="font-size:12px;">2020</i></p>
-			<a href="Black-Ops-II.html" class="transition"><img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/Black-Ops-II/c_usa_hudson_afghanistan_head_c.jpg"/></a></span>
-        </div>
-	
-		<h1>26.<span class="star"></span></h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-            <p class="titles2"><b>casualstaring</b> <i style="font-size:12px;">2020–Present</i></p>
-			<span class="location">An Intimate Collection of Casual AV Pairings with Jack+Marisa+Michael</span>
-			<a target="_blank" href="https://jackilgore.com/cs185-hci/" class="transition"><img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/casual-staring/casual-staring.jpg"/></a></span>
-        </div>
-
-        <h1>27.<span class="star"></span></h1>				
-		<div style="background-color:#FFFFFF;" class="work2">
-            <p class="titles2"><b>sock.chat</b> <i style="font-size:12px;">2020–Present</i></p>
-			<span class="location">Internet Surf Club Member</span>
-			<a target="_blank" href="https://sock.chat/" class="transition"><img width="550px;" style="margin-top:2px;" src="https://michaelseh.com//images-compressed/sock-chat/sock-station.jpg"/></a></span>
-        </div>
-
-   		<h1>28.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Mom</b> <i style="font-size:12px;">2020</i></p>
-			<a href="https://michaelseh.com///images-compressed/Mom/Mom.jpg" class="transition">
-			<img width="550px;" style="margin-top:1px;" src="https://michaelseh.com///images-compressed/Mom/Mom.jpg"/></a></span>
-		</div>
-		
-		<h1>29.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Watch a sunset at least once a day</b> <i style="font-size:12px;">2019</i></p>
-			<a href="Watch-a-sunset-at-least-once-a-day.html" class="transition"><img width="550px;" style="margin-top:1px;" src="https://michaelseh.com//images-compressed/watch-a-sunset-at-least-once-a-day/watch-a-sunset-at-least-once-a-day.jpg"/></a></span>
-		</div>
-		
-		<h1>30.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Clickies</b> <i style="font-size:12px;">2019</i></p>
-			<a href="Clickies.html" class="transition"><img width="550px;" style="margin-top:1px;" src="https://michaelseh.com//images-compressed/Clickies/Clickies.jpg"/></a></span>
-		</div>
-
-		<h1>31.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>Bouldering</b> <i style="font-size:12px;">2018</i></p>
-			<a href="https://michaelseh.com//images-compressed/Bouldering/Bouldering.jpg" class="transition">
-			<img width="550px;" style="margin-top:1px;" src="https://michaelseh.com//images-compressed/Bouldering/Bouldering.jpg"/></a></span>
-		</div>
-
-		<h1>32.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>me and weed</b> <i style="font-size:12px;">2016</i></p>
-			<a href="me-and-weed.html" class="transition">
-			<img width="550px;" style="margin-top:1px;" src="https://michaelseh.com/images-compressed//me-and-weed/me-and-weed.jpg"/></a></span>
-		</div>
-
-		<h1>33.</h1>
-		<div style="background-color:#FFFFFF;" class="work2">
-			<p class="titles2"><b>MICHAEL DONT FUCKING LAUGH OR ITS GG</b> <i style="font-size:12px;">2011</i></p>
-			<span class="location">Friends who won't stop bringing it up</span>
-			<a href="GGFUCKMICHAEL.html" class="transition">
-			<img width="550px;" style="margin-top:1px;" src="https://michaelseh.com/images-compressed//GGFUCKMICHAEL/MICHAELFUNCKINGDONT.jpg"/></a></span>
-		</div>
-<hr>
-<div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;"target="_blank" href="https://michaelseh.com/Curriculum_Vitae_Seh_Michael.pdf">CV</a></div>
-<div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;"href="Peers.html">PEERS</a></div>
-<div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;"target="_blank" href="https://twitter.com/mikexmamba">TWITTER</a></div>
-<div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;"target="_blank" href="https://www.twitch.tv/mikebronbron">TWITCH</a></div>
-<div id="footer"><a style="font-size:12px;font-weight:bold;color:black;margin-left:0px;"href="mailto:studio@michaelseh.com">EMAIL</a></div>
-</body>
+<div style="position: absolute; left: -5000px;"><input type="text" name="b_2712b2f065d82d380d4069f6a_f893f639d2" tabindex="-1"></div>
 </div>
-</html>
+</form>
+</div>
+</h6>
+</span>
+</span>
+</div>
+<div id="content-inner-wrapper">
+<div id="notice"><br><br><br>
+Michael Seh<br>b.2000, Glendale<br>lives and works in Los Angeles<br><br><a href="https://michaelseh.com/Curriculum_Vitae_Seh_Michael.pdf" target="_blank"><mark>click to view cv</mark></a><br><br><br>
+I rarely check voicemail or return calls. If you want an actual response, email me.<br><br>my email is studio [at] michaelseh [dot] com<br><br>
+
+<div id="main">
+<a href="resour/Black-Forest-Ham-on-Adidas-Hamburg.html">
+Michael Seh<br>
+<em>Black Forest Ham on Adidas Hamburg</em><br><br>
+April 16 &ndash; August 31, 2021
+</a>
+</div>
+<div id="fwrapper">
+<div id="past">
+
+<ul>
+<li><strong>2021</strong></li>
+<li><a href="resour/Black-Forest-Ham-on-Adidas-Hamburg.html">Black Forest Ham on Adidas Hamburg</a></li>
+<li><a href="https://rollingdownthehill.net/">rollingdownthehill.net</a></li>
+<li><strong>2020</strong></li>
+<li><a href="resour/Hero.html">Hero</a></li>
+</ul>
+</div>
+<div id="press">
+<ul>
+<li><strong>Socials</strong></li>
+<li><a href="https://www.twitch.tv/mikebronbron" target="_blank">Twitch</a></li>
+<li><a href="https://twitter.com/mikexmamba" target="_blank">Twitter</a></li>
+<li><a href="https://www.youtube.com/michaelseh" target="_blank">YouTube</a></li>
+<li><a href="https://sock.chat/" target="_blank">Sock.Chat</a></li>
+<li><strong>Code</strong></li>
+<li><a href="https://github.com/michaelseh" target="_blank">GitHub</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
