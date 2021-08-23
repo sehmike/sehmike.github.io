@@ -78,7 +78,7 @@ a {font-size: 1em;}
 #header {height: 100px; text-align: left; width: 700px; position: absolute; top: 35px; right: 0; left: 0; margin: auto; font-size: 1.3em}
 
 #content-inner-wrapper {margin-top: 335px;}
-#logo {text-decoration: none; padding: 15px; float: left; margin-top: 15px;}
+#logo {text-decoration: none; padding: 15px; float: left; margin-top: 2px;}
 #info {margin-left: 20px; float: none; border-bottom: 4px solid #FEFF00; padding: 15px; height: 100px;}
 #main {width: 700px; height: 450px; padding-top: 250px; margin-bottom: 50px; font-size: 1.3em;}
 #exhibit {font-weight: normal; color: #000; text-align: left; margin-bottom: 45px; line-height: 1.5em; margin-top: 335px;}
