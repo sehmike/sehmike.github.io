@@ -32,21 +32,6 @@ body {padding: 35px; font-family: sans-serif; font-weight: normal; text-align: c
 #info {margin-left: 20px; float: left; border-bottom: 4px solid #FEFF00; padding: 15px; height: 30px;}
 #main {width: 700px; height: 400px; padding-top: 300px; margin-bottom: 20px;}
 #main a {color: #FEFF00; text-decoration: none; border: 4px solid #FEFF00; padding: 20px; font-weight: normal; display: inline-block;}
-.hover-unblur .fl-photo-content {
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.hover-unblur .fl-photo-content .fl-photo-img {
-  -webkit-filter: blur(3px);
-          filter: blur(3px);
-  -webkit-transition: .3s ease-in-out;
-          transition: .3s ease-in-out;
-  will-change: filter;
-}
-.hover-unblur .fl-photo-content .fl-photo-img:hover {
-  -webkit-filter: blur(0);
-          filter: blur(0);
-}
 #moreinfo {display: none; padding-left: 5px;}
 #exhibit {font-weight: normal; color: #000; text-align: left; margin-bottom: 45px; line-height: 1.5em; margin-top: 100px;}
 #exhibit2 {font-weight: normal; color: #000; text-align: center; margin-bottom: 45px; line-height: 1.5em; margin-top: 100px;}
