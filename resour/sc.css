@@ -22,10 +22,6 @@ em {font-size: 1em;}
 sup {font-size: .25em}
 
 img {margin-bottom: 0px; margin-top: 0px; border: 0px solid #FEFF00;}
-img:hover {
-	-webkit-filter:  blur(4px);
-	filter: blur(4px);
-}
 body {padding: 35px; font-family: sans-serif; font-weight: normal; text-align: center;}
 #header {height: 100px; text-align: left; width: 700px; position: fixed; top: 35px; right: 0; left: 0; margin: auto; font-size: 1em;}
 
