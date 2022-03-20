@@ -36,7 +36,7 @@ body {padding: 35px; font-family: sans-serif; font-weight: normal; text-align: c
 #logo {text-decoration: none; padding: 15px; float: left; margin-top: 15px;}
 #info {margin-left: 20px; float: left; border-bottom: 4px solid #f4f4f6; padding: 15px; height: 30px;}
 #main {width: 700px; height: 400px; background-image: url('https://michaelseh.com/images-compressed/Galerie_Kebab_Now_Representing_MichaelSeh.jpg'); background-repeat: repeat; padding-top: 300px; margin-bottom: 20px;}
-#main a {color: #000000; text-decoration: none; border: 4px solid #f4f4f6; padding: 20px; font-weight: normal; display: inline-block;}
+#main a {color: #0000FF; text-decoration: none; border: 4px solid #f4f4f6; padding: 20px; font-weight: normal; display: inline-block;}
 #moreinfo {display: none; padding-left: 5px;}
 #exhibit {font-weight: normal; color: #000; text-align: left; margin-bottom: 45px; line-height: 1.5em; margin-top: 100px;}
 #exhibit2 {font-weight: normal; color: #000; text-align: center; margin-bottom: 45px; line-height: 1.5em; margin-top: 100px;}
