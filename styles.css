@@ -9,8 +9,9 @@
 	h1 {
       font-family: TeeFranklin-Medium, Helvetica, sans-serif;
       font-weight: 100%;
-      font-size: 13px;
+      font-size: 10em;
       color: #444444;
+      letter-spacing: .05em;;
   					}
   	
     a {
