@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'TeeFranklin-Medium';
+	src: url(fonts/TeeFranklin-Medium.ttf) format('truetype');
+	font-size:13px
+}
+
+body {
+	font-family: 'TeeFranklin-Medium', 'Helvetica', sans-serif;
+}
