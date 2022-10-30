@@ -3,13 +3,25 @@
     src: url('/fonts/TeeFranklin-Medium.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
          url('/fonts/TeeFranklin-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
     font-style: normal;
-	font-weight: 100%; }  
+	font-weight: 100%; }
+@font-face {
+    font-family: 'TeeFranklin-Book';
+    src: url('/fonts/TeeFranklin-Book.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+         url('/fonts/TeeFranklin-Book.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+    font-style: normal;
+	font-weight: 100%; }
 	h1 {
       font-family: TeeFranklin-Medium, Helvetica, sans-serif;
       text-transform: uppercase;
       color: #444444;
       letter-spacing: .05em;
-      font-size: 13px; }	
+      font-size: 13px; }
+    h2 {
+      font-family: TeeFranklin-Book, Helvetica, sans-serif;
+      text-transform: uppercase;
+      color: #444444;
+      letter-spacing: .05em;
+      font-size: 13px; }
     a {
       color: #ccc;
       text-decoration: none }
