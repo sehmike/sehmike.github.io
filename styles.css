@@ -1,9 +1,13 @@
 @font-face {
-	font-family: TeeFranklin-Medium;
-	src: url(https://michaelseh.com/fonts/TeeFranklin-Medium.ttf) format('truetype'); }
+	font-family: 'TeeFranklin-Medium';
+	src: url(https://michaelseh.com/fonts/TeeFranklin-Medium.ttf) format('truetype'); 
+	font-style: normal;
+	font-weight: 100%;
+	}
 
 	h1 {
       font-family: TeeFranklin-Medium, Helvetica, sans-serif;
+      font-weight: 100%;
       font-size: 13px;
       color: #444444;
   					}
