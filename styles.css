@@ -4,6 +4,36 @@
 	font-size:13px
 }
 
-body {
-	font-family: 'TeeFranklin-Medium', 'Helvetica', sans-serif;
-}
+.Stil1 {
+      font-family: 'TeeFranklin-Medium', 'Helvetica', sans-serif}
+    #Div1 {
+      position: absolute;
+      left: 116px;
+      top: 192px;
+      width: 507px;
+      height: 445px;
+      z-index: 15;
+    }
+    .Stil7 {
+      font-size: 12px}
+    .Stil8 {
+      font-size: 14px
+    }
+    #Div2 {
+      position: absolute;
+      left: 292px;
+      top: 34px;
+      width: 145px;
+      height: 83px;
+      z-index: 15;
+      font-size: 12px;
+    }
+    a {
+      color: #ccc;
+      text-decoration: none }
+    a:active   {
+      color: #000;
+      text-decoration: none }
+    a:hover      {
+      color: #000;
+      text-decoration: none }
