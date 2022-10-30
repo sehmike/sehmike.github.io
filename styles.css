@@ -2,9 +2,8 @@
 	font-family: TeeFranklin-Medium;
 	src: url(https://michaelseh.com/fonts/TeeFranklin-Medium.ttf) format('truetype');
 }
-
 .Stil1 {
-      font-family: TeeFranklin-Medium, Helvetica, sans-serif}
+      font-family: TeeFranklin-Medium, Helvetica, sans-serif};
     #Div1 {
       position: absolute;
       left: 116px;
