@@ -1,31 +1,11 @@
 @font-face {
 	font-family: TeeFranklin-Medium;
-	src: url(https://michaelseh.com/fonts/TeeFranklin-Medium.ttf) format('truetype');
-}
-.Stil1 {
+	src: url(https://michaelseh.com/fonts/TeeFranklin-Medium.ttf) format('truetype'); }
+
+	h1 {
       font-family: TeeFranklin-Medium, Helvetica, sans-serif};
-    #Div1 {
-      position: absolute;
-      left: 116px;
-      top: 192px;
-      width: 507px;
-      height: 445px;
-      z-index: 15;
-    }
-    .Stil7 {
-      font-size: 13px}
-    .Stil8 {
-      font-size: 13px
-    }
-    #Div2 {
-      position: absolute;
-      left: 292px;
-      top: 34px;
-      width: 145px;
-      height: 83px;
-      z-index: 15;
-      font-size: 12px;
-    }
+      font-size: 13px;}
+  	
     a {
       color: #ccc;
       text-decoration: none }
