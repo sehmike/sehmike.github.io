@@ -4,7 +4,9 @@
 
 	h1 {
       font-family: TeeFranklin-Medium, Helvetica, sans-serif;
-      font-size: 13px;}
+      font-size: 13px;
+      color: #444444;
+  					}
   	
     a {
       color: #ccc;
