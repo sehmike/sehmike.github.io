@@ -1,2 +1,0 @@
-# sehmike.github.io
-Website
