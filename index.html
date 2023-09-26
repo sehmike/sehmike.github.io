@@ -5,16 +5,12 @@
 <meta content="Copyright © michaelseh.com"name=copyright>
  <head>
   <link rel="stylesheet" href="message.css">
-  <meta id="viewport" name='viewport'>
-<script>
-    (function(doc) {
-        var viewport = document.getElementById('viewport');
-        if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
-            viewport.setAttribute("content", "initial-scale=0.3");
-        } else if ( navigator.userAgent.match(/iPad/i) ) {
-            viewport.setAttribute("content", "initial-scale=0.7");
-        }
-    }(document));
+  <meta name="viewport" content="width=1024">
+<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+  if (/iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase())) {
+    $("meta[name='viewport']").attr("content", "width=640");
+  }
 </script>
 </head> 
 <script>function rechts(){2==event.button&&alert("Copyright © michaelseh.com")}document.onmousedown=rechts</script>
