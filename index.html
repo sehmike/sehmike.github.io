@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta name="robots" content="noindex">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="X">
-  <meta property="og:url" content="https://michaelseh.com" />
-  <meta property="og:image" content="https://michaelseh.com/img/Chinese_black_dragon.png" />
-  <meta property="og:title" content="Michael Seh" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="Michael Seh">
-  <meta name="twitter:description" content="X">
-  <meta name="twitter:image" content="https://michaelseh.com/img/Chinese_black_dragon.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <title>Michael Seh</title>
-  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-
-    <style>
-    body,
-    html {
-      margin: 0;
-      height: 100%;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      body {
-        filter: invert(90%);
-        background-color: #000;
-      }
-    }
-
-    .box {
-      height: 100%;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .image {
-      max-width: 16rem;
-      margin: auto;
-    }
-  </style>
-  
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <meta charset=utf-8 />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Michael Seh</title>
 </head>
 
 <body>
-  <div class="box">
-      <img src="https://michaelseh.com/Falcon.png" alt="" class="image">
-    </a>
-  </div>
+    <div class="ShowText">
+    </div>
+    <script id="jsbin-javascript">
+        var textarray = [
+        "M",
+        "I",
+        "C",
+        "H",
+        "A",
+        "E",
+        "L"
+        ];
+        
+        function RndTxt() {
+        var rannum= Math.floor(Math.random()*textarray.length);
+        document.getElementById("news").innerHTML=textarray[rannum];
+        }
+        onload = function() { RndTxt(); };
+        
+        var inter = setInterval(function() { RndTxt(); }, 2000);
+        
+        $(function(){
+        
+            var chars = [
+            { id: 'M'},
+          { id: 'I'},
+          { id: 'C'},
+            { id: 'H'},
+          { id: 'A'},
+            { id: 'E'},
+          { id: 'L'}
+            ];
+        
+            var counter = 0;
+            
+        
+            (function nextFade() {
+                counter++;
+              var data = chars[Math.floor(Math.random()*chars.length)];
+                var square = $('<span class="news" id="news" />');
+                square.html(data.id).appendTo('.ShowText').hide().fadeIn(75, function() {
+                    if(counter < 40) nextFade();
+                });
+            })();
+        
+        });
+    </script>
 </body>
 
 </html>
