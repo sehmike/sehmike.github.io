@@ -1,65 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Michael Seh</title>
-    <meta name="viewport" content="width=device-width, initial-scale=.69"/>
+  <title>Michael Seh Studio</title>
+  <meta name="author" content="Michael Seh Studio">
+  <meta name="copyright" content="Michael Seh Studio">
+  <meta name="revisit-after" content="14 days">
+  <meta name="subject" content="Michael Seh Studio from Los Angeles is a multi-disciplinary design studio focussing on web/print design.">
+  <meta name="description" content="Michael Seh Studio from Los Angeles is a multi-disciplinary design studio focussing on web/print design.">
+  <meta name="keywords" content="web, print, motion, los angeles, california, graphic, broadcast, webdesign, logo, brand">
+  <meta http-equiv="content-language" content="en">
+  <meta name="robots" content="INDEX, FOLLOW">
+  <script language="JavaScript">
+            function rechts() {
+                2 == event.button && alert("© Michael Seh");
+            }
+            document.onmousedown = rechts;
+  </script>
+  <style>
+        @charset "UTF-8";
+        /* CSS Document */
 
-    <script language="JavaScript">
-        <!-- begin
-// global variables
-var max=0;
-function textlist()
-{
-      max=textlist.arguments.length;
-        for (i=0; i<max; i++)
-                this[i]=textlist.arguments[i];
-}
-tl=new textlist(
-        "* * * * *",        
-        "Publication Design, Web Design, DJ @michaelseh,",
-        "and other printed and digital matter for cultural and commercial clients.",
-        "INFO LINE: 213.531.7316",
-        "To listen to Michael's mixes, and for any booking requests",
-        "please contact mail@michaelseh.com"
-);
-var x=0; pos=0;
-var l=tl[0].length;
-function news() 
-{        
-        document.form1.textfeld.value=tl[x].substring(0,pos)+"";
-        if(pos++==l)
-        {
-                pos=0;
-                setTimeout("news()",2000);
-                x++;
-                if(x==max)
-                        x=0;
-                l=tl[x].length;
-        } else
-                setTimeout("news()",1);
-}
-       // end -->
-    </script>
-    <script language="JavaScript">
-        function rechts(){2==event.button&&alert("© Michael Seh")}document.onmousedown=rechts
-    </script>
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+
+        #cont {
+            width: 860px;
+            margin: 0 auto;
+        }
+
+        .deadGhost {
+            margin: 24px 0 60px 31px;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #48c6fd;
+            font-size: 28px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: #ffffff;
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        h3 {
+            font-weight: bold;
+            color: #48c6fd;
+            font-size: 16px;
+        }
+
+        .adressBlock {
+            margin: 45px 100px 0 0;
+            width: 266px;
+            float: left;
+        }
+
+        .adressBlock h1 {
+            font-weight: bold;
+            color: #48c6fd;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .adressBlock p {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 23px;
+        }
+
+        .adressBlock p a {
+            color: #48c6fd;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .adressBlock p a:hover {
+            color: #ffffff;
+            background-color: #48c6fd;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .adressBlock p a.white {
+            color: #ffffff;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .adressBlock p a.white:hover {
+            color: #48c6fd;
+            background-color: #ffffff;
+            font-size: 16px;
+            text-decoration: none;
+        }
+  </style>
 </head>
-
-<body alt body bgcolor="#faf7fe" text="#eeeeee" link="#FFFFFF" vlink="#FFFFFF" onload="news()">
-
-    <table width="100%" height="100%" cellpadding="10">
-
-        <tr>
-            <td align="middle">
-                <font face="Geneva" , "arial", "helvetica">
-                    <form name="form1">
-                        <input type="text" name="textfeld" size="60">
-                    </form>
-                </font>
-            </td>
-        </tr>
-    </table>
+<body>
+  <div id="cont">
+    <img src="https://michaelseh.com/topLine.gif" alt="topLine"><br><br>
+    <img class="deadGhost" src="https://michaelseh.com/deadGhost.gif" width="35" height="35" alt="deadGhost">
+    <h1>dear visitors,</h1>
+    <h2>michael seh studio has ceased its business on 03-01-2023.<br>
+    all business is continued by the former shareholders<br>
+    under a new name.<br>
+    you can reach your former contacts as follows:</h2>
+    <div class="adressBlock">
+      <h1>michael seh</h1>
+      <p>back catalog<br>
+      tel + 1 213 531 7316</p>
+    </div>
+    <div class="adressBlock">
+      <h1>anton lin</h1>
+      <p>stockx<br>
+      tel + 1 510 771 4175</p>
+    </div>
+  </div>
 </body>
-
 </html>
