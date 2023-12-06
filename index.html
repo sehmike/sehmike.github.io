@@ -2,25 +2,14 @@
 <html lang="en">
   <head>
     <title>Michael Seh (Web/Print + Art Direction)</title>
-    <link
-      rel="icon"
-      href="https://michaelseh.com/favicon_dark.svg"
-      sizes="any"
-      media="(prefers-color-scheme: dark)"
-      type="image/svg+xml"
-    >
-    <link
-      rel="icon"
-      href="https://michaelseh.com/favicon.svg"
-      sizes="any"
-      media="(prefers-color-scheme: light)"
-      type="image/svg+xml"
-    >
+    <link rel="icon" href="https://michaelseh.com/favicon_dark.svg" sizes="any" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+    <link rel="icon" href="https://michaelseh.com/favicon.svg" sizes="any" media="(prefers-color-scheme: light)" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=0.7, user-scalable=no">
     <meta name="author" content="Michael Seh (Web/Print + Art Direction)">
     <meta name="copyright" content="Michael Seh (Web/Print + Art Direction)">
     <meta name="revisit-after" content="14 days">
-    <meta name="subject" content="<Michael Seh lives and works in Los Angeles. To learn more about him, try Google or michaelseh.com.">
+    <meta name="subject" content="
+                  <Michael Seh lives and works in Los Angeles. To learn more about him, try Google or michaelseh.com.">
     <meta name="description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or michaelseh.com.">
     <meta name="keywords" content="web, print, photo, los angeles, california, graphic, webdesign, design, artdirection, art, contemporary art">
     <meta name="robots" content="INDEX, FOLLOW">
@@ -144,83 +133,93 @@
         }
       }
     </style>
-  </head>
-  <header class="inv">
-    <img src="https://michaelseh.com/logo.svg" alt="">
-  </header>
-  <main>
-    <article class="portrait">
-      <img alt="" src="https://michaelseh.com/m_site_01.jpg">
-    </article>
-    <article class="portrait">
-      <img alt="" src="https://michaelseh.com/m_site_02.jpg">
-    </article>
-    <article class="portrait">
-      <img alt="" src="https://michaelseh.com/m_site_03.jpg">
-    </article>
-    <article class="square">
-      <img alt="" src="https://michaelseh.com/m_site_04.jpg">
-    </article>
-    <article class="square">
-      <img alt="" src="https://michaelseh.com/m_site_05.jpg">
-    </article>
-    <article class="portrait">
-      <img alt="" src="https://michaelseh.com/m_site_06.jpg">
-    </article>
-    <article class="square">
-      <img alt="" src="https://michaelseh.com/m_site_07.jpg">
-    </article>
-    <article class="square">
-      <img alt="" src="https://michaelseh.com/m_site_08.png">
-    </article>
-    <article class="portrait">
-      <img alt="" src="https://michaelseh.com/m_site_09.jpg">
-    </article>
-    <article class="portrait">
-      <img alt="" src="https://michaelseh.com/m_site_10.jpg">
-    </article>
-    <article class="square">
-      <img alt="" src="https://michaelseh.com/m_site_11.svg">
-    </article>
-    <article class="square">
-      <img alt="" src="https://michaelseh.com/m_site_12.jpg">
-    </article>
-  </main>
-  <footer class="inv">WEB/PRINT + <br> ART DIRECTION <br>
-    <section>
-      <p>DIALOGUE</p>
-      <p>MAIL@MICHAELSEH.COM</p>
-      <p>CONCEPT</p>
-      <p>
-        <a href="mailto:mail@michaelseh.com" target="_blank">CONTACT</a>
-      </p>
-      <p>EDITING</p>
-      <p>+ 1 213 531 7316</p>
-    </section>
-  </footer>
-  <script>
-    let i = fi = z = 0
-    const qa = e => document.querySelectorAll(e),
-      a = qa("article"),
-      fs = qa("section p"),
-      f = e => e.style.zIndex = z,
-      ns = () => {
-        fs[fi].style.display = "none", fi = (fi + 1) % fs.length, fs[fi].style.display = "inline"
-      },
-      next = () => {
-        i = (i + 1) % a.length, z += 1
-        f(a[i]), ns()
-      },
-      click = () => {
-        next(), clearInterval(s)
+    <script>
+      var titleText = document.title;
+
+      function titleMarquee() {
+        titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+        document.title = titleText;
+        setTimeout("titleMarquee()", 450);
       }
-    document.body.onclick = click
-    const s = setInterval(  next, 1500)
-  </script>
-  <script>
-    function rechts() {
-      2 == event.button && alert("© Michael Seh (Web/Print + Art Direction)");
-    }
-    document.onmousedown = rechts;
-  </script>
+    </script>
+  </head>
+  <body onload="titleMarquee()">
+    <header class="inv">
+      <img src="https://michaelseh.com/logo.svg" alt="">
+    </header>
+    <main>
+      <article class="portrait">
+        <img alt="" src="https://michaelseh.com/m_site_01.jpg">
+      </article>
+      <article class="portrait">
+        <img alt="" src="https://michaelseh.com/m_site_02.jpg">
+      </article>
+      <article class="portrait">
+        <img alt="" src="https://michaelseh.com/m_site_03.jpg">
+      </article>
+      <article class="square">
+        <img alt="" src="https://michaelseh.com/m_site_04.jpg">
+      </article>
+      <article class="square">
+        <img alt="" src="https://michaelseh.com/m_site_05.jpg">
+      </article>
+      <article class="portrait">
+        <img alt="" src="https://michaelseh.com/m_site_06.jpg">
+      </article>
+      <article class="square">
+        <img alt="" src="https://michaelseh.com/m_site_07.jpg">
+      </article>
+      <article class="square">
+        <img alt="" src="https://michaelseh.com/m_site_08.png">
+      </article>
+      <article class="portrait">
+        <img alt="" src="https://michaelseh.com/m_site_09.jpg">
+      </article>
+      <article class="portrait">
+        <img alt="" src="https://michaelseh.com/m_site_10.jpg">
+      </article>
+      <article class="square">
+        <img alt="" src="https://michaelseh.com/m_site_11.svg">
+      </article>
+      <article class="square">
+        <img alt="" src="https://michaelseh.com/m_site_12.jpg">
+      </article>
+    </main>
+    <footer class="inv">WEB/PRINT + <br> ART DIRECTION <br>
+      <section>
+        <p>DIALOGUE</p>
+        <p>MAIL@MICHAELSEH.COM</p>
+        <p>CONCEPT</p>
+        <p>
+          <a href="mailto:mail@michaelseh.com" target="_blank">CONTACT</a>
+        </p>
+        <p>EDITING</p>
+        <p>+ 1 213 531 7316</p>
+      </section>
+    </footer>
+    <script>
+      let i = fi = z = 0
+      const qa = e => document.querySelectorAll(e),
+        a = qa("article"),
+        fs = qa("section p"),
+        f = e => e.style.zIndex = z,
+        ns = () => {
+          fs[fi].style.display = "none", fi = (fi + 1) % fs.length, fs[fi].style.display = "inline"
+        },
+        next = () => {
+          i = (i + 1) % a.length, z += 1
+          f(a[i]), ns()
+        },
+        click = () => {
+          next(), clearInterval(s)
+        }
+      document.body.onclick = click
+      const s = setInterval(next, 1500)
+    </script>
+    <script>
+      function rechts() {
+        2 == event.button && alert("© Michael Seh (Web/Print + Art Direction)");
+      }
+      document.onmousedown = rechts;
+    </script>
 </html>
