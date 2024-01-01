@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Michael Seh (Web/Print + Art Direction)&ensp;</title>
     <link rel="icon" href="https://michaelseh.com/favicon_dark.svg" sizes="any" media="(prefers-color-scheme: dark)" type="image/svg+xml">
     <link rel="icon" href="https://michaelseh.com/favicon.svg" sizes="any" media="(prefers-color-scheme: light)" type="image/svg+xml">
@@ -14,222 +15,232 @@
     <meta name="keywords" content="web, print, photo, los angeles, california, graphic, webdesign, design, artdirection, art, contemporary art">
     <meta name="robots" content="INDEX, FOLLOW">
     <style>
-      :root {
-        touch-action: pan-x pan-y;
-        --bg: #FFFFFF
-      }
-
-      * {
-        margin: 0;
-        padding: 0
-      }
-
-      html {
-        background: var(--bg);
-        color: black;
-        font-size: 40px;
-        letter-spacing: 0px;
-        font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
-        text-align: center;
-        height: 100%;
-        overflow: hidden;
-        user-select: none
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        display: inline-block
-      }
-
-      a:hover {
-        color: #0000FF;
-        content: attr(href)
-      }
-
-      a::after {
-        display: inline-block;
-        animation: s 0.3s infinite alternate
-      }
-
-      .inv {
-        filter: invert(1);
-        mix-blend-mode: difference;
-        z-index: 999
-      }
-
-      header {
-        position: absolute;
-        top: 0.5rem;
-        width: 100%;
-        text-align: center
-      }
-
-      header img {
-        height: 3rem
-      }
-
-      main {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0 auto
-      }
-
-      article {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%
-      }
-
-      article * {
-        padding: 10rem;
-        background: var(--bg);
-        object-fit: cover
-      }
-
-      article.portrait * {
-        max-height: 100%;
-        min-width: 100%
-      }
-
-      article.video * {
-        max-width: 90%;
-        margin-bottom: 1rem
-      }
-
-      article.square * {
-        max-width: 90%;
-        max-height: 90%;
-        margin-bottom: 1rem
-      }
-
-      footer {
-        position: absolute;
-        bottom: 1rem;
-        width: 100%;
-        text-align: center
-      }
-
-      footer section p:not(:first-of-type) {
-        display: none
-      }
-
-      @media screen and (min-width:900px) {
-
-        article *,
-        article.portrait *,
-        article.video *,
-        article.square * {
-          max-height: calc(100% - 3.5rem);
-          max-width: 90%;
-          object-fit: contain;
-          margin: 0
-        }
-      }
+        :root {
+            touch-action: pan-x pan-y;
+            --bg: #FFFFFF
+          }
+    
+          * {
+            margin: 0;
+            padding: 0
+          }
+    
+          html {
+            background: var(--bg);
+            color: black;
+            font-size: 40px;
+            letter-spacing: 0px;
+            font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+            text-align: center;
+            height: 100%;
+            overflow: hidden;
+            user-select: none
+          }
+    
+          a {
+            color: inherit;
+            text-decoration: none;
+            display: inline-block
+          }
+    
+          img:hover {
+            cursor: ew-resize;
+          }
+    
+          video:hover {
+            cursor: ew-resize;
+          }
+    
+          a:hover {
+            color: #0000FF;
+            content: attr(href)
+          }
+    
+          a::after {
+            display: inline-block;
+            animation: s 0.3s infinite alternate
+          }
+    
+          .inv {
+            filter: invert(1);
+            mix-blend-mode: difference;
+            z-index: 999
+          }
+    
+          header {
+            position: absolute;
+            top: 0.5rem;
+            width: 100%;
+            text-align: center
+          }
+    
+          header img {
+            height: 3rem
+          }
+    
+          main {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto
+          }
+    
+          article {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%
+          }
+    
+          article * {
+            padding: 10rem;
+            background: var(--bg);
+            object-fit: cover
+          }
+    
+          article.portrait * {
+            max-height: 100%;
+            min-width: 100%
+          }
+    
+          article.video * {
+            max-width: 90%;
+            margin-bottom: 1rem
+          }
+    
+          article.square * {
+            max-width: 90%;
+            max-height: 90%;
+            margin-bottom: 1rem
+          }
+    
+          footer {
+            position: absolute;
+            bottom: 1rem;
+            width: 100%;
+            text-align: center
+          }
+    
+          footer section p:not(:first-of-type) {
+            display: none
+          }
+    
+          @media screen and (min-width:900px) {
+    
+            article *,
+            article.portrait *,
+            article.video *,
+            article.square * {
+              max-height: calc(100% - 3.5rem);
+              max-width: 90%;
+              object-fit: contain;
+              margin: 0
+            }
+          }
     </style>
     <script>
-      var titleText = document.title;
-
-      function titleMarquee() {
-        titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
-        document.title = titleText;
-        setTimeout("titleMarquee()", 450);
-      }
+        var titleText = document.title;
+    
+          function titleMarquee() {
+            titleText = titleText.substring(1, titleText.length) + titleText.substring(0, 1);
+            document.title = titleText;
+            setTimeout("titleMarquee()", 450);
+          }
     </script>
-  </head>
-  <body onload="titleMarquee()">
+</head>
+
+<body onload="titleMarquee()">
     <header class="inv">
-      <img src="https://michaelseh.com/logo.svg" alt="">
+        <img src="https://michaelseh.com/logo.svg" alt="">
     </header>
     <main>
-      <article class="portrait">
-        <img alt="" src="https://michaelseh.com/m_site_01.jpg">
-      </article>
-      <article class="portrait">
-        <img alt="" src="https://michaelseh.com/m_site_02.jpg">
-      </article>
-      <article class="portrait">
-        <img alt="" src="https://michaelseh.com/m_site_03.jpg">
-      </article>
-      <article class="square">
-        <img alt="" src="https://michaelseh.com/m_site_04.jpg">
-      </article>
-      <article class="square">
-        <img alt="" src="https://michaelseh.com/m_site_05.jpg">
-      </article>
-      <article class="portrait">
-        <img alt="" src="https://michaelseh.com/m_site_06.jpg">
-      </article>
-      <article class="square">
-        <img alt="" src="https://michaelseh.com/m_site_07.jpg">
-      </article>
-      <article class="square">
-        <img alt="" src="https://michaelseh.com/m_site_08.png">
-      </article>
-      <article class="portrait">
-        <img alt="" src="https://michaelseh.com/m_site_09.jpg">
-      </article>
-      <article class="portrait">
-        <img alt="" src="https://michaelseh.com/m_site_10.jpg">
-      </article>
-      <article class="video">
-        <video autoplay loop muted playsinline>
+        <article class="portrait">
+            <img alt="" src="https://michaelseh.com/m_site_01.jpg">
+        </article>
+        <article class="portrait">
+            <img alt="" src="https://michaelseh.com/m_site_02.jpg">
+        </article>
+        <article class="portrait">
+            <img alt="" src="https://michaelseh.com/m_site_03.jpg">
+        </article>
+        <article class="square">
+            <img alt="" src="https://michaelseh.com/m_site_04.jpg">
+        </article>
+        <article class="square">
+            <img alt="" src="https://michaelseh.com/m_site_05.jpg">
+        </article>
+        <article class="portrait">
+            <img alt="" src="https://michaelseh.com/m_site_06.jpg">
+        </article>
+        <article class="square">
+            <img alt="" src="https://michaelseh.com/m_site_07.jpg">
+        </article>
+        <article class="square">
+            <img alt="" src="https://michaelseh.com/m_site_08.png">
+        </article>
+        <article class="portrait">
+            <img alt="" src="https://michaelseh.com/m_site_09.jpg">
+        </article>
+        <article class="portrait">
+            <img alt="" src="https://michaelseh.com/m_site_10.jpg">
+        </article>
+        <article class="video">
+            <video autoplay loop muted playsinline>
           <source src="https://michaelseh.com/m_site_11.mp4" type="video/mp4">
         </video>
-      </article>
-      <article class="square">
-        <img alt="" src="https://michaelseh.com/m_site_12.jpg">
-      </article>
-      <article class="video">
-        <video autoplay loop muted playsinline>
+        </article>
+        <article class="square">
+            <img alt="" src="https://michaelseh.com/m_site_12.jpg">
+        </article>
+        <article class="video">
+            <video autoplay loop muted playsinline>
           <source src="https://michaelseh.com/m_site_13.mp4" type="video/mp4">
         </video>
-      </article>
-      <article class="square">
-        <img alt="" src="https://michaelseh.com/m_site_14.jpg">
-      </article>
+        </article>
+        <article class="square">
+            <img alt="" src="https://michaelseh.com/m_site_14.jpg">
+        </article>
     </main>
     <footer class="inv">WEB/PRINT + <br> ART DIRECTION <br>
-      <section>
-        <p>DIALOGUE</p>
-        <p>MAIL@MICHAELSEH.COM</p>
-        <p>CONCEPT</p>
-        <p>
-          <a href="mailto:mail@michaelseh.com" target="_blank">CONTACT</a>
-        </p>
-        <p>EDITING</p>
-        <p>+1 213 531 7316</p>
-      </section>
+        <section>
+            <p>DIALOGUE</p>
+            <p>MAIL@MICHAELSEH.COM</p>
+            <p>CONCEPT</p>
+            <p>
+                <a href="mailto:mail@michaelseh.com" target="_blank">CONTACT</a>
+            </p>
+            <p>EDITING</p>
+            <p>+1 213 531 7316</p>
+        </section>
     </footer>
     <script>
-      let i = fi = z = 0
-      const qa = e => document.querySelectorAll(e),
-        a = qa("article"),
-        fs = qa("section p"),
-        f = e => e.style.zIndex = z,
-        ns = () => {
-          fs[fi].style.display = "none", fi = (fi + 1) % fs.length, fs[fi].style.display = "inline"
-        },
-        next = () => {
-          i = (i + 1) % a.length, z += 1
-          f(a[i]), ns()
-        },
-        click = () => {
-          next(), clearInterval(s)
-        }
-      document.body.onclick = click
-      const s = setInterval(next, 1500)
+        let i = fi = z = 0
+          const qa = e => document.querySelectorAll(e),
+            a = qa("article"),
+            fs = qa("section p"),
+            f = e => e.style.zIndex = z,
+            ns = () => {
+              fs[fi].style.display = "none", fi = (fi + 1) % fs.length, fs[fi].style.display = "inline"
+            },
+            next = () => {
+              i = (i + 1) % a.length, z += 1
+              f(a[i]), ns()
+            },
+            click = () => {
+              next(), clearInterval(s)
+            }
+          document.body.onclick = click
+          const s = setInterval(next, 1500)
     </script>
     <script>
-      function rechts() {
-        2 == event.button && alert("© Michael Seh (Web/Print + Art Direction)");
-      }
-      document.onmousedown = rechts;
+        function rechts() {
+            2 == event.button && alert("© Michael Seh (Web/Print + Art Direction)");
+          }
+          document.onmousedown = rechts;
     </script>
+
 </html>
