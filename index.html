@@ -43,10 +43,6 @@
             display: inline-block
           }
     
-          img:hover {
-            cursor: ew-resize;
-          }
-    
           video:hover {
             cursor: ew-resize;
           }
@@ -122,14 +118,7 @@
           @media screen and (min-width:900px) {
     
             article *,
-            article.portrait *,
-            article.video *,
-            article.square * {
-              max-height: calc(100% - 3.5rem);
-              max-width: 90%;
-              object-fit: contain;
-              margin: 0
-            }
+            article.video *
           }
     </style>
     <script>
