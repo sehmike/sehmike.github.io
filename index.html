@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-<!-- Forked from JON LUCAS, JON-L.COM -->
+  <!-- Forked from JON LUCAS, JON-L.COM -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
   <title>Michael Seh (Web/Print + Art Direction)</title>
   <link rel="icon" href="https://michaelseh.com/favicon_dark.svg" sizes="any" media="(prefers-color-scheme: dark)" type="image/svg+xml">
   <link rel="icon" href="https://michaelseh.com/favicon.svg" sizes="any" media="(prefers-color-scheme: light)" type="image/svg+xml">
@@ -16,149 +16,178 @@
   <meta name="description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or michaelseh.com.">
   <meta name="keywords" content="web, print, photo, los angeles, california, graphic, webdesign, design, artdirection, art, contemporary art">
   <meta name="robots" content="INDEX, FOLLOW">
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-<style>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style>
   * {
-    margin:0;
+    margin: 0;
   }
-
+  
   img::selection {
-    background:none;
+    background: none;
   }
-
-  html, 
-  body, 
+  
+  html,
+  body,
   button {
-    font:20px 'ABCSocial-Book', arial;
+    font: 20px 'ABCSocial-Book', arial;
   }
-
+  
   button {
-    padding:14px;
+    padding: 14px;
   }
-
+  
   main {
     position: relative;
-    float:left;
+    float: left;
   }
-
+  
   figure {
     position: relative;
-    float:left;
-    clear:none;
-    margin:7px 0px 0px 7px;
+    float: left;
+    clear: none;
+    margin: 7px 0px 0px 7px;
   }
-
-    figcaption {
-      position: relative;
-      float:left;
-      clear:both;
-    }
-
+  
+  figcaption {
+    position: relative;
+    float: left;
+    clear: both;
+  }
+  
   img {
     position: relative;
-    float:left;
+    float: left;
     width: 100%;
     cursor: pointer;
-    margin-bottom:1px;
+    margin-bottom: 1px;
   }
-
+  
   disclaimer {
-  position: fixed;
-  left: 1.5rem;
-  right: 1.5rem;
-  top: 1.5rem;
-  padding: .5em;
-  font-size: 13px;
-  z-index: 9000;
+    position: fixed;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 1.5rem;
+    padding: .5em;
+    font-size: 13px;
+    z-index: 9000;
   }
   
   @media (max-width:700px) {
-    
-    html,body{
-      font:18px 'ABCSocial-Book', arial;
+    html,
+    body {
+      font: 18px 'ABCSocial-Book', arial;
     }
-
     .disclaimer {
-    right: 70%;
+      right: 70%;
+    }
   }
-    
-  }
-</style>
-
+  </style>
 </head>
+
 <body>
-<div class="disclaimer">© Michael Seh (Web/Print + Art Direction)</div>
-<main>
+  <div class="disclaimer">© Michael Seh (Web/Print + Art Direction)</div>
+  <main>
+    <script>
+    window.onload = function() {
+      window.setTimeout(function() {
+        document.querySelector('.disclaimer').parentNode.removeChild(document.querySelector('.disclaimer'));
+      }, 1e4);
+    };
+    </script>
+    <script>
+    $(function() {
+      let imgs = [{
+        url: "https://michaelseh.com/content/fF4T46Pmjsqa9U.jpg",
+        caption: "<p>YZY Casting, 2023&ensp;&ensp;&ensp;&ensp;Illustration: Robert Valle&ensp;&ensp;&ensp;&ensp;Art Direction: Alex Foster</p>"
+      }, {
+        url: "https://michaelseh.com/content/H2zdosfRY2EJSR.jpg",
+        caption: ""
+      }, {
+        url: "https://michaelseh.com/content/Hme74UUjfPCxK5.jpg",
+        caption: ""
+      }, {
+        url: "https://michaelseh.com/content/Q7b8cJ3us8AzHm.jpg",
+        caption: ""
+      }, {
+        url: "https://michaelseh.com/content/u52kYxNTKRWJWn.jpg",
+        caption: "Look 5 | Mowalola, 2023&ensp;&ensp;&ensp;&ensp;Graphics: Dawid Dinh"
+      }, {
+        url: "https://michaelseh.com/content/iFpy43JKA3VbsG.jpg",
+        caption: "Look 14 | Mowalola, 2023&ensp;&ensp;&ensp;&ensp;Graphics: Dawid Dinh"
+      }, {
+        url: "https://michaelseh.com/content/ZpMfQuLC38gAds.jpg",
+        caption: ""
+      }, {
+        url: "https://michaelseh.com/content/RajBKQsk4E79NJ.jpg",
+        caption: "Rundgang Party, 2023"
+      }, {
+        url: "https://michaelseh.com/content/wx9UAEaburq8wP.jpg",
+        caption: "Städelschule Rundgang, 2023"
+      }, {
+        url: "https://michaelseh.com/content/GfRcDw6LrERayT.jpg",
+        caption: "Klasse Tobias Rehberger, 2023"
+      }, {
+        url: "https://michaelseh.com/content/hAAE9fgWqXBggQ.jpg",
+        caption: "Studio 103 Rundgang A2 Variation, 2023&ensp;&ensp;&ensp;&ensp;Editing: Raúl I. Lima"
+      }, {
+        url: "https://michaelseh.com/content/7QfTFMNLWtaQPe.jpg",
+        caption: "Black 1, 2023&ensp;&ensp;&ensp;&ensp;Artwork: Tuğçe Dayıoğlu&ensp;&ensp;&ensp;&ensp;Photography: Jiyoon Chung"
+      }, {
+        url: "https://michaelseh.com/content/ut53NbinttH4BR.jpg",
+        caption: "Tennis Skirt | Los Angeles Apparel, 2023&ensp;&ensp;&ensp;&ensp;Editing: Bevin Palmer"
+      }, {
+        url: "https://michaelseh.com/content/vR6ecPBSpr3TGC.jpg",
+        caption: "Tennis Skirt | Los Angeles Apparel, 2023&ensp;&ensp;&ensp;&ensp;Editing: Bevin Palmer"
+      }, {
+        url: "https://michaelseh.com/content/A45cx2rDiYcQA3.jpg",
+        caption: ""
+      }, {
+        url: "https://michaelseh.com/content/A9eJjiLto9vHRr.jpg",
+        caption: "The Robot Watch, 2023"
+      }, {
+        url: "https://michaelseh.com/content/zMBecVkY5TzPwW.jpg",
+        caption: "Koons &  Astérix, 2023"
+      }, ];
 
-<script>
-window.onload = function(){
-  window.setTimeout(function(){
-  document.querySelector('.disclaimer').parentNode.removeChild(document.querySelector('.disclaimer'));
-},1e4);
-};
-</script>
- 
-<script>
-$(function(){
-
-  let imgs = [
-   
-   { url: "https://michaelseh.com/content/fF4T46Pmjsqa9U.jpg", caption: "<p>YZY Casting, 2023&ensp;&ensp;&ensp;&ensp;Illustration: Robert Valle&ensp;&ensp;&ensp;&ensp;Art Direction: Alex Foster</p>" },{ url: "https://michaelseh.com/content/H2zdosfRY2EJSR.jpg", caption: "" },{ url: "https://michaelseh.com/content/Hme74UUjfPCxK5.jpg", caption: "" },{ url: "https://michaelseh.com/content/Q7b8cJ3us8AzHm.jpg", caption: "" },{ url: "https://michaelseh.com/content/u52kYxNTKRWJWn.jpg", caption: "Look 5 | Mowalola, 2023&ensp;&ensp;&ensp;&ensp;Graphics: Dawid Dinh" },{ url: "https://michaelseh.com/content/iFpy43JKA3VbsG.jpg", caption: "Look 14 | Mowalola, 2023&ensp;&ensp;&ensp;&ensp;Graphics: Dawid Dinh" },{ url: "https://michaelseh.com/content/ZpMfQuLC38gAds.jpg", caption: "" },{ url: "https://michaelseh.com/content/RajBKQsk4E79NJ.jpg", caption: "Rundgang Party, 2023" },{ url: "https://michaelseh.com/content/wx9UAEaburq8wP.jpg", caption: "Städelschule Rundgang, 2023" },{ url: "https://michaelseh.com/content/GfRcDw6LrERayT.jpg", caption: "Klasse Tobias Rehberger, 2023" },{ url: "https://michaelseh.com/content/hAAE9fgWqXBggQ.jpg", caption: "Studio 103 Rundgang A2 Variation, 2023&ensp;&ensp;&ensp;&ensp;Editing: Raúl I. Lima" },{ url: "https://michaelseh.com/content/7QfTFMNLWtaQPe.jpg", caption: "Black 1, 2023&ensp;&ensp;&ensp;&ensp;Artwork: Tuğçe Dayıoğlu&ensp;&ensp;&ensp;&ensp;Photography: Jiyoon Chung" },{ url: "https://michaelseh.com/content/ut53NbinttH4BR.jpg", caption: "Tennis Skirt | Los Angeles Apparel, 2023&ensp;&ensp;&ensp;&ensp;Editing: Bevin Palmer" },{ url: "https://michaelseh.com/content/vR6ecPBSpr3TGC.jpg", caption: "Tennis Skirt | Los Angeles Apparel, 2023&ensp;&ensp;&ensp;&ensp;Editing: Bevin Palmer" },{ url: "https://michaelseh.com/content/A45cx2rDiYcQA3.jpg", caption: "" },{ url: "https://michaelseh.com/content/A9eJjiLto9vHRr.jpg", caption: "The Robot Watch, 2023" },{ url: "https://michaelseh.com/content/zMBecVkY5TzPwW.jpg", caption: "Koons &  Astérix, 2023" },
-  ];
-  
-  function shuffle(a) {
-      var j, x, i;
-      for (i = a.length - 1; i > 0; i--) {
+      function shuffle(a) {
+        var j, x, i;
+        for(i = a.length - 1; i > 0; i--) {
           j = Math.floor(Math.random() * (i + 1));
           x = a[i];
           a[i] = a[j];
           a[j] = x;
+        }
+        return a;
       }
-      return a;
-  }
-
-  shuffle(imgs);
-
-  var width = Math.floor(Math.random()*25 + 25);
-  var i = 0;
-
-  $("main").prepend("<figure style='max-width:"+width+"%'><img src='"+imgs[i].url+"'/><figcaption>"+imgs[i].caption+"</figcaption></figure>");
-  
-  i++;
-  
-$("main").on("click",function(){
-
-   
-    var random = Math.floor(Math.random()*imgs.length),
-      width = Math.floor(Math.random()*25 + 25),
-      src = imgs[random];
-
-    if(i < imgs.length){
-    
-        $("main").prepend("<figure style='max-width:"+width+"%'><img src='"+imgs[i].url+"'/><figcaption>"+imgs[i].caption+"</figcaption></figure>");
-        i++;
-    
-        $('img').on('dragstart', function(event) { event.preventDefault(); });
-        
-    
+      shuffle(imgs);
+      var width = Math.floor(Math.random() * 25 + 25);
+      var i = 0;
+      $("main").prepend("<figure style='max-width:" + width + "%'><img src='" + imgs[i].url + "'/><figcaption>" + imgs[i].caption + "</figcaption></figure>");
+      i++;
+      $("main").on("click", function() {
+        var random = Math.floor(Math.random() * imgs.length),
+          width = Math.floor(Math.random() * 25 + 25),
+          src = imgs[random];
+        if(i < imgs.length) {
+          $("main").prepend("<figure style='max-width:" + width + "%'><img src='" + imgs[i].url + "'/><figcaption>" + imgs[i].caption + "</figcaption></figure>");
+          i++;
+          $('img').on('dragstart', function(event) {
+            event.preventDefault();
+          });
+        }
+      });
+      $('img').on('dragstart', function(event) {
+        event.preventDefault();
+      });
+    });
+    </script>
+    <script>
+    function rechts() {
+      2 == event.button && alert("© Michael Seh (Web/Print + Art Direction)");
     }
-});
-
-  $('img').on('dragstart', function(event) { event.preventDefault(); });
-  
-
-});
-</script>
-
-<script>
-        function rechts() {
-            2 == event.button && alert("© Michael Seh (Web/Print + Art Direction)");
-          }
-          document.onmousedown = rechts;
-</script>
-
-</main>
+    document.onmousedown = rechts;
+    </script>
+  </main>
 </body>
+
+</html>
