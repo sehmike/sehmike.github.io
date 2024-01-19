@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>michaelseh.com</title>
-    <link rel="icon" href="/svg/favicon_dark.svg" sizes="any" media="(prefers-color-scheme: dark)" type="image/svg+xml">
-    <link rel="icon" href="/svg/favicon.svg" sizes="any" media="(prefers-color-scheme: light)" type="image/svg+xml">
+    <link rel="icon" href="/favicon_dark.svg" sizes="any" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+    <link rel="icon" href="/favicon.svg" sizes="any" media="(prefers-color-scheme: light)" type="image/svg+xml">
     <meta name="author" content="Michael Seh (Web/Print + Art Direction)">
     <meta name="copyright" content="Michael Seh (Web/Print + Art Direction)">
     <meta name="revisit-after" content="14 days">
@@ -20,5 +20,22 @@
     <div class="content-wrapper">
         <h1>Michael Seh</h1>
         <p class="excerpt">(previously whotookmichaelseh, mikemamba, mikeyseh)</p>
-        <p>Recent activities include design for Yeezy and Los Angeles Apparel; and study at the Städelschule in Frankfurt, Germany</p> 
+        <p>Recent activities include design for Yeezy and Los Angeles Apparel; and study at the Städelschule in Frankfurt, Germany</p><br><br> 
+        <p>MICHAEL SEH<br>
+        MAIL@MICHAELSEH.COM M +1 213.531.7316<br>
+        MICHAELSEH.COM<br>
+        <img src="/footer.jpg" alt="" width="200" height="20"></p>
+    <footer>
+      <span data-type id="year"></span>
+      <a data-type target="_blank" href="/privacy">Privacy</a>
+    </footer>
+
+    <script>
+      const year = new Date().getFullYear()
+      let el = document.getElementById("year")
+      year
+        ? (el.innerHTML = `©&thinsp;${year}`)
+        : (el.innerHTML = `©&thinsp;2013`)
+    </script>
+
     </div>
