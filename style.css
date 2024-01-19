@@ -7,7 +7,7 @@
       }
 
       a {
-        color: #909090;
+        color: #000;
         text-decoration: none;
       }
 
@@ -51,5 +51,4 @@ p {
 footer{
 	line-height: 0.7em;
 	margin-bottom: 1em;
-	color: #909090;
 }
