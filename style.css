@@ -46,7 +46,6 @@
   visibility: visible;
   white-space: nowrap;
   width: auto;
-  zoom: 1;
 }
 
 .jui-google-result__description {
@@ -60,5 +59,4 @@
   visibility: visible;
   width: auto;
   word-wrap: break-word;
-  zoom: 1;
 }
