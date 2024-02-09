@@ -5,6 +5,7 @@ html, body {
     margin: -50px 0px 0px 0px;
     border: 0;
     outline: 0;
+    font-family: 'SF-Pro-Text-Regular';
 }
 body {
     display: flex;
@@ -37,4 +38,9 @@ body {
      display: none;
  }
 
+}
+
+@font-face {
+  font-family: "SF-Pro-Text-Regular";
+  src: url("/SF-Pro-Text-Regular.woff2") format('SF-Pro-Text-Regular');
 }
