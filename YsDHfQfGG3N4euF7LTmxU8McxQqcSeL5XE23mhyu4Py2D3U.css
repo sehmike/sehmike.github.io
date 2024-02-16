@@ -1,1 +1,122 @@
-body,html{background-color:#F2F2F7;width:100%;height:100%;margin:0;border:0;outline:0}body{display:flex;align-items:center;justify-content:center}p{margin-top:-35px;font-family:'SF-Pro-Text-Regular'}@media only screen and (orientation:portrait){#turn{display:none}#container{display:block}}@media only screen and (orientation: landscape){#turn{display:block}#container{display:none}}@font-face{font-family:SF-Pro-Text-Regular;src:url("https://michaelseh.com/SF-Pro-Text-Regular.woff2") format('woff2')}
+@font-face {
+  font-family: NeueHaasUnica-Regular;
+  src: url("https://michaelseh.com/NeueHaasUnica-Regular.woff2") format("woff2");
+}
+
+:root {
+  --ratio: 9 / 16;
+  --font-size: calc(7vmin * var(--ratio));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-kerning: auto;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
+.navbar-main {
+  background-color: #f2f2f7;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  font-family: "NeueHaasUnica-Regular", Arial;
+  display: grid;
+  grid-template-areas: "center";
+  transition: background 0.3s linear;
+}
+
+.list-items__navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: calc(50vh - 1.5rem / 2);
+  grid-area: center;
+  position: relative;
+  z-index: 10;
+}
+
+.item__navbar {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.item__navbar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.item__navbar span:nth-child(1) {
+  margin-bottom: 15px;
+  letter-spacing: 0.1rem;
+}
+
+.item__navbar span:nth-child(2) {
+  font-size: 0.65rem;
+  font-weight: 200;
+  letter-spacing: 0.35rem;
+}
+
+.video-group {
+  grid-area: center;
+  position: relative;
+}
+
+.video__item {
+  width: 30%;
+  min-width: 200px;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+.video__item:nth-child(1) {
+  top: 5vh;
+  left: 15vw;
+}
+
+.video__item:nth-child(2) {
+  top: 10vh;
+  left: calc(50vw);
+  transform: translatex(-50%);
+}
+
+.video__item:nth-child(3) {
+  top: 8vh;
+  left: calc(100vw - 30% - 150px);
+}
+
+.video__item:nth-child(4) {
+  top: 30vh;
+  left: 15vw;
+}
