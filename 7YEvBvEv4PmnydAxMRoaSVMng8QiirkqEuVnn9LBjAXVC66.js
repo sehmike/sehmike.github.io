@@ -1,0 +1,1 @@
+const year=(new Date).getFullYear();let el=document.getElementById("year");el.innerHTML=year?`©&thinsp;${year}`:"©&thinsp;2018";
