@@ -1,10 +1,10 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Michael Seh",
+    "short_name": "Michael Seh",
     "icons": [
         {
-            "src": "/android-chrome-72x72.png",
-            "sizes": "72x72",
+            "src": "/android-chrome-96x96.png",
+            "sizes": "96x96",
             "type": "image/png"
         }
     ],
