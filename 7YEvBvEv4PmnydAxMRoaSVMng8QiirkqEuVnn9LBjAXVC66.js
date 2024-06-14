@@ -1,1 +1,0 @@
-function watchForHover(){let t=0;function e(){new Date-t<500||document.body.classList.add("hasHover")}document.addEventListener("touchstart",(function(){t=new Date}),!0),document.addEventListener("touchstart",(function(){document.body.classList.remove("hasHover")}),!0),document.addEventListener("mousemove",e,!0),e()}watchForHover();
