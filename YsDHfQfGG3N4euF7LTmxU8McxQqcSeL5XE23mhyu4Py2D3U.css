@@ -1,1 +1,1 @@
-.center {position: absolute;box-sizing: border-box;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+ button, textarea, input, select, a{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight-color: transparent;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
