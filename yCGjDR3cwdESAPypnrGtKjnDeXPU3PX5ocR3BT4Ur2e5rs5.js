@@ -1,7 +1,7 @@
 const baseUrl = "https://michaelseh.com/album/";
 const images = [];
 const start = 1;
-const end = 1052;
+const end = 1053;
 
 for (let i = start; i <= end; i++) {
   images.push(`${baseUrl}${i}.jpg`);
