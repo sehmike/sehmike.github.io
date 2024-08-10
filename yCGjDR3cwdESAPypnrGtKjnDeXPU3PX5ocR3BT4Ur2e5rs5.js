@@ -1,1 +1,1 @@
-const images=[],start=1,end=999;for(let e=1;e<=end;e++)images.push(`./image/${e}.jpg`);const imageDisplay=document.getElementById("image-display");function shuffleImage(){const e=Math.floor(Math.random()*images.length);imageDisplay.src=images[e]}shuffleImage(),setInterval(shuffleImage,500);
+const images=[],start=1,end=999;for(let e=1;e<=end;e++)images.push(`${e}.jpg`);const imageDisplay=document.getElementById("image-display");function shuffleImage(){const e=Math.floor(Math.random()*images.length);imageDisplay.src=images[e]}shuffleImage(),setInterval(shuffleImage,500);
