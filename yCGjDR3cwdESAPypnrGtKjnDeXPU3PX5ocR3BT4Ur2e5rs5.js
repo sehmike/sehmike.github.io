@@ -1,6 +1,6 @@
 const images = [];
 const start = 1;
-const end = 1043;
+const end = 1055;
 
 for (let i = start; i <= end; i++) {
   images.push(`https://michaelseh.com/album/${i}.jpg`);
