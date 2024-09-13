@@ -1,1 +1,0 @@
-const images=[],start=1001,end=1012;for(let e=1;e<=end;e++)images.push(`${e}.jpg`);const imageDisplay=document.getElementById("image-display");function shuffleImage(){const e=Math.floor(Math.random()*images.length);imageDisplay.src=images[e]}shuffleImage(),setInterval(shuffleImage,500);
