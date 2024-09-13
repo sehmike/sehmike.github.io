@@ -11,8 +11,7 @@ function nextImage() {
   showImage(currentIndex);
 }
 
-// Automatically change images every 3 seconds
-setInterval(nextImage, 3000);
+setInterval(nextImage, 500);
 
 // Show the first image initially
 showImage(currentIndex);
