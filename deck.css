@@ -2,6 +2,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: white;
+  height: 100vh; /* Full height for vertical centering */
+  display: flex; /* Use Flexbox to center the slideshow */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 .slideshow-container {
@@ -15,11 +19,12 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 80vh; /* Set a height for the slideshow */
 }
 
 .slideshow img {
   max-width: 100%;
-  max-height: 80vh;
+  max-height: 100%; /* Adjust to fill the container */
   object-fit: contain;
   display: none;
 }
@@ -30,6 +35,6 @@ body {
 
 @media (max-width: 768px) {
   .slideshow img {
-    max-height: 60vh;
+    max-height: 60vh; /* Adjust for smaller screens */
   }
 }
