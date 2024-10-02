@@ -1,1 +1,0 @@
-const images=document.querySelectorAll(".slideshow img");let currentIndex=0;function showImage(e){images.forEach((e=>e.style.display="none")),images[e].style.display="block"}function nextImage(){currentIndex=(currentIndex+1)%images.length,showImage(currentIndex)}setInterval(nextImage,500),showImage(currentIndex);
