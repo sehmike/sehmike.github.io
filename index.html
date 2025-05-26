@@ -27,14 +27,17 @@
   <script>
     window.onload = function() {
       var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+      var isAndroid = /Android/i.test(navigator.userAgent);
       var pdfURL = "https://michaelseh.com/Michael_Seh_Information_2025.pdf";
       
-      if (isIOS) {
+      if (isIOS || isAndroid) {
+        // Open PDF directly in a new tab for mobile devices
         window.location.href = pdfURL;
       } else {
+        // Embed PDF in iframe for non-mobile devices
         var iframe = document.getElementById("pdf-embed");
         iframe.src = pdfURL; // Set the iframe source
-        iframe.style.display = "block";
+        iframe.style.display = "block"; // Make the iframe visible
       }
     };
   </script>
