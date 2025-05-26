@@ -29,14 +29,12 @@
       var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
       var pdfURL = "https://michaelseh.com/Michael_Seh_Information_2025.pdf";
       
-      // If it's iOS, open the PDF directly in a new tab
       if (isIOS) {
-        window.location.href = pdfURL;  // Redirect to the PDF directly
+        window.location.href = pdfURL;
       } else {
-        // For non-iOS devices, display the iframe and set its source
         var iframe = document.getElementById("pdf-embed");
         iframe.src = pdfURL; // Set the iframe source
-        iframe.style.display = "block"; // Make the iframe visible
+        iframe.style.display = "block";
       }
     };
   </script>
@@ -53,12 +51,11 @@
       width: 100vw;
       height: 100vh;
       border: none;
-      display: none; /* Initially hide iframe until we determine the device */
+      display: none;
     }
   </style>
 </head>
 <body>
-  <!-- This iframe will be used on non-iOS devices, will remain hidden on iOS -->
   <iframe id="pdf-embed" title="PDF Viewer"></iframe>
 </body>
 </html>
