@@ -24,6 +24,12 @@
   <meta name="msapplication-TileColor" content="#603cba">
   <meta name="theme-color" content="#ffffff">
   
+  <script>
+    window.onload = function() {
+      window.open('https://michaelseh.com/Michael_Seh_Information_2025.pdf', '_blank');
+    };
+  </script>
+  
   <style>
     html, body {
       height: 100%;
@@ -31,38 +37,8 @@
       padding: 0;
       overflow: hidden;
     }
-
-    /* For larger screens, use iframe */
-    @media (min-width: 768px) {
-      iframe {
-        width: 100vw;
-        height: 100vh;
-        border: none;
-        overflow-y: scroll;
-        overflow-x: hidden;
-      }
-    }
-
-    @media (max-width: 767px) {
-      iframe {
-        display: none; /* Hide iframe on mobile */
-      }
-      .pdf-link {
-        display: block;
-        text-align: center;
-        margin-top: 20px;
-      }
-    }
   </style>
 </head>
 <body>
-  <iframe src="https://michaelseh.com/Michael_Seh_Information_2025.pdf" title="PDF Viewer">
-    This browser does not support PDFs. Please download the PDF to view it: <a href="https://michaelseh.com/Michael_Seh_Information_2025.pdf">Download PDF</a>.
-  </iframe>
-
-  <div class="pdf-link">
-    <p>Tap to view the PDF:</p>
-    <a href="https://michaelseh.com/Michael_Seh_Information_2025.pdf" target="_blank">Open PDF</a>
-  </div>
 </body>
 </html>
