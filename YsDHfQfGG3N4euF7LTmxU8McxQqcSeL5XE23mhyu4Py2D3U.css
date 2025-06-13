@@ -31,11 +31,6 @@ body {
   padding-bottom: 60px;
 }
 
-svg:first-of-type {
-  position: relative;
-  left: 2px;
-}
-
 svg, img {
   width: 100%;
   max-height: 200px;
