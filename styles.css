@@ -59,7 +59,7 @@ canvas {
     width: calc(var(--group-width) * var(--main-ratio));
     height: auto;
     position: relative;
-    top: -2vh;
+    top: -4vh;
 }
 
 .svg-wrapper a .svg-icon,
@@ -94,6 +94,6 @@ canvas {
     }
 
     .svg-wrapper .svg-main {
-        top: -2vh;
+        top: -4vh;
     }
 }
