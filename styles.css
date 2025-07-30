@@ -6,10 +6,10 @@
 }
 
 html, body {
-  padding: 0;
   margin: 0;
-  height: 100%;
+  padding: 0;
   width: 100%;
+  height: 100%;
   overflow: hidden;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -17,6 +17,7 @@ html, body {
   position: relative;
 }
 
+/* Background image <img> that shows PNG first, then GIF */
 #bg-gif {
   position: fixed;
   top: 0;
@@ -24,13 +25,9 @@ html, body {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  image-rendering: auto;
+  z-index: -1;          /* Behind all content */
+  pointer-events: none; /* Doesn't block clicks */
+  user-select: none;    /* Disable text selection */
 }
 
 .top-icon {
