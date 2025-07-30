@@ -1,1 +1,62 @@
-:root{font-size:16px;--group-width:25rem;--icon-ratio:0.1;--main-ratio:0.9}body,html{padding:0;height:100%;width:100%;overflow:hidden;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;overflow-x:hidden}canvas{position:fixed;top:0;left:0;z-index:-1;display:block}.top-icon{position:fixed;top:2rem;left:50%;transform:translateX(-50%);z-index:10}.top-icon svg{width:100%;height:auto;fill:#f0eada}.svg-wrapper{width:var(--group-width);margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7rem;min-height:100vh;box-sizing:border-box;padding-top:calc(var(--group-width) * var(--icon-ratio) + 2rem)}.svg-wrapper a .svg-icon{height:auto}.svg-wrapper .svg-main{width:calc(var(--group-width) * var(--main-ratio));height:auto;position:relative;top:-8vh}.svg-wrapper a .svg-icon,.top-icon{width:calc(var(--group-width) * var(--icon-ratio))}.svg-wrapper svg:hover,.top-icon svg{cursor:pointer}@media (max-width:600px){body,html{margin-top:0}:root{--group-width:20rem}.svg-wrapper{gap:2rem;padding:1rem;padding-top:calc(var(--group-width) * var(--icon-ratio) + 1rem)}.top-icon{width:calc(var(--group-width) * var(--icon-ratio));top:1.5rem}.svg-wrapper .svg-main{top:-8vh}}
+:root {
+  font-size: 16px;
+  --group-width: 25rem;
+  --icon-ratio: 0.1;
+  --main-ratio: 0.9;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+
+  background: url('https://michaelseh.com/000.png') no-repeat center center fixed;
+  background-size: cover;
+
+  position: relative;
+}
+
+.top-icon {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: calc(var(--group-width) * var(--icon-ratio));
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.top-icon:hover,
+.top-icon:focus-visible {
+  background: rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+.top-icon svg {
+  width: 100%;
+  height: auto;
+  fill: #f0eada;
+  display: block;
+  filter: none;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .top-icon {
+    width: calc(var(--group-width) * var(--icon-ratio));
+    top: 1.5rem;
+    padding: 0;
+  }
+}
