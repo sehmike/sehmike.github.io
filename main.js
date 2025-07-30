@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-  const fullBgUrl = "https://michaelseh.com/001.gif"; + Math.random();
+  const fullBgUrl = "https://michaelseh.com/001.gif?" + Math.random();
 
   const img = new Image();
   img.src = fullBgUrl;
