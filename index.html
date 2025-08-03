@@ -1,52 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-        <title>michaelseh.com</title>
-        <meta property="og:title" content="michaelseh.com">
-        <meta name="description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
-        <meta property="og:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
-        <meta property="og:url" content="https://michaelseh.com">
-        <meta property="og:site_name" content="michaelseh.com">
-        <meta property="og:type" content="website">
-        <meta name="twitter:title" content="michaelseh.com">
-        <meta name="twitter:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
-        <meta name="twitter:url" content="https://michaelseh.com">
-        <link rel="preload" href="css/scaler.css" as="style">
-        <link rel="preload" href="js/jquery-1.4.2.js" as="script">
-        <link rel="preload" href="js/scaler.js" as="script">
-        <link rel="preload" href="js/mondongo-jquery.js" as="script">
-        <link rel="stylesheet" href="css/scaler.css">
-        <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
-
-  <!--[if IE]><meta http-equiv="imagetoolbar" content="no">
-  <meta http-equiv="X-UA-Compatible" content="IE=8">
-  <![endif]-->
-  <!--[if lt IE 7]>
-  <script defer type="text/javascript" src="js/pngfix.js"></script>
-  <![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>michaelseh.com</title>
+  <meta property="og:title" content="michaelseh.com">
+  <meta name="description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
+  <meta property="og:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
+  <meta property="og:url" content="https://michaelseh.com">
+  <meta property="og:site_name" content="michaelseh.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:title" content="michaelseh.com">
+  <meta name="twitter:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
+  <meta name="twitter:url" content="https://michaelseh.com">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+   <script src="script.js" defer></script> 
 
-  <!-- INFO -->
-  <div style="padding:0;background:transparent;position:absolute;left:20px;top:30px;z-index:3;cursor:pointer;">
-  <a href="https://www.linkedin.com/in/michael-seh" target="_blank" rel="noopener noreferrer">
-    <img src="https://michaelseh.com/info.svg" height="120px" alt="Michael Seh LinkedIn">
+  <!-- INFO BUTTON -->
+  <a class="info-btn" href="https://www.linkedin.com/in/michael-seh" target="_blank" rel="noopener noreferrer">
+    <img src="https://michaelseh.com/info.svg" height="120" alt="Michael Seh LinkedIn">
   </a>
+
+  <!-- GALLERY -->
+  <div class="gallery-wrapper" id="galleryWrapper">
+    <div class="gallery" id="gallery">
+      <img src="https://michaelseh.com/page_sliced_01.png" alt="">
+      <img src="https://michaelseh.com/page_sliced_02.png" alt="">
+      <img src="https://michaelseh.com/page_sliced_03.png" alt="">
+      <img src="https://michaelseh.com/page_sliced_04.png" alt="">
+      <img src="https://michaelseh.com/page_sliced_05.png" alt="">
+    </div>
+    <div class="nav-zone nav-left" id="navLeft"></div>
+    <div class="nav-zone nav-right" id="navRight"></div>
   </div>
 
-  <!-- GALLERY / IMAGES -->
-  <div id="bg">
-    <b><i><i><img alt="" src="https://michaelseh.com/page_sliced_01.png"/></i></i></b>
-    <b><i><i><img alt="" src="https://michaelseh.com/page_sliced_02.png"/></i></i></b>
-    <b><i><i><img alt="" src="https://michaelseh.com/page_sliced_03.png"/></i></i></b>
-    <b><i><i><img alt="" src="https://michaelseh.com/page_sliced_04.png"/></i></i></b>
-    <b><i><i><img alt="" src="https://michaelseh.com/page_sliced_05.png"/></i></i></b>
-  </div>
-
-  <script type="text/javascript" src="js/scaler.js"></script>
-  <script type="text/javascript" src="js/mondongo-jquery.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
