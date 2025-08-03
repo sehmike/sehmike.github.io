@@ -1,37 +1,53 @@
-const gallery = document.getElementById('gallery');
-const navLeft = document.getElementById('navLeft');
-const navRight = document.getElementById('navRight');
-const imgCount = gallery.children.length;
-let current = 0;
+// Gallery core navigation
+document.addEventListener('DOMContentLoaded', () => {
+  const gallery = document.querySelector('.gallery');
+  const images = Array.from(document.querySelectorAll('.gallery img'));
+  const navLeft = document.getElementById('navLeft');
+  const navRight = document.getElementById('navRight');
+  let currentIndex = 0;
 
-// Navigation function
-function goTo(idx) {
-  current = (idx + imgCount) % imgCount;
-  gallery.style.transform = `translateX(-${current * 100}vw)`;
-}
-
-// Click/touch navigation
-navLeft.addEventListener('click', () => goTo(current - 1));
-navRight.addEventListener('click', () => goTo(current + 1));
-
-// Touch/swipe navigation (mobile)
-let startX = null;
-gallery.addEventListener('touchstart', (e) => {
-  if (e.touches.length === 1) startX = e.touches[0].clientX;
-});
-gallery.addEventListener('touchmove', (e) => {
-  if (startX === null) return;
-  const dx = e.touches[0].clientX - startX;
-  // Lower threshold for better responsiveness
-  if (dx > 35) {
-    goTo(current - 1);
-    startX = null;
-  } else if (dx < -35) {
-    goTo(current + 1);
-    startX = null;
+  function showImage(index) {
+    images.forEach((img, i) => {
+      if (i === index) {
+        img.classList.add('active');
+      } else {
+        img.classList.remove('active');
+      }
+    });
   }
-});
-gallery.addEventListener('touchend', (e) => { startX = null; });
 
-// Prevent accidental dragging of images on desktop
-gallery.addEventListener('dragstart', (e) => e.preventDefault());
+  function prevImage() {
+    currentIndex = (currentIndex + images.length - 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  navLeft.addEventListener('click', prevImage);
+  navRight.addEventListener('click', nextImage);
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevImage();
+    else if (e.key === 'ArrowRight') nextImage();
+  });
+
+  // Touch swipe navigation
+  let startX = null;
+  gallery.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) startX = e.touches[0].clientX;
+  });
+  gallery.addEventListener('touchend', (e) => {
+    if (startX === null || e.touches.length > 0) return;
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) prevImage();
+    if (startX - endX > 50) nextImage();
+    startX = null;
+  });
+
+  // Initialize
+  showImage(currentIndex);
+});
