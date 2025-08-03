@@ -1,1 +1,0 @@
-window.addEventListener("load",(function(){const n="https://michaelseh.com/001.gif?"+Math.random(),e=document.getElementById("bg-gif"),t=new Image;t.src=n,t.onload=function(){e.src=n}}));
