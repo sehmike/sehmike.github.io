@@ -24,6 +24,7 @@ html, body {
   width: 100vw;
   overflow: hidden;
   position: relative;
+  touch-action: pan-y;
 }
 
 .gallery {
@@ -50,15 +51,29 @@ html, body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: calc(50vw - 2px); /* Prevents touching browser edge */
   z-index: 2;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.08);
+  touch-action: manipulation;
 }
 
-.nav-left {
-  left: 2px; /* Pull in from absolute edge */
-  background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0));
+@media (max-width: 600px) {
+  .info-btn img { height: 80px; }
+  .nav-zone {
+    width: 50vw;
+  }
+  .nav-left { left: 0; background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
+  .nav-right { right: 0; background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
+  .nav-left:hover, .nav-right:hover {
+    cursor: pointer;
+  }
 }
 
-.nav-right {
-  right: 2px; /* Pull in from absolute edge */
-  background: linear-gradient(to left
+@media (min-width: 601px) {
+  .nav-zone {
+    width: calc(50vw - 2px);
+  }
+  .nav-left { left: 2px; background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
+  .nav-right { right: 2px; background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
+  .nav-left:hover { cursor: w-resize; }
+  .nav-right:hover { cursor: e-resize; }
+}
