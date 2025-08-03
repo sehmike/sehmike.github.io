@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background: #000;
+  /* Removed black background to allow images to show on default background */
   font-family: sans-serif;
   overflow: hidden;
 }
@@ -20,7 +20,7 @@ html, body {
   border: none;
 }
 
-/* Gallery Layout */
+/* Gallery container */
 .gallery-wrapper {
   position: relative;
   width: 100vw;
@@ -32,6 +32,7 @@ html, body {
   justify-content: center;
 }
 
+/* Gallery flex row */
 .gallery {
   display: flex;
   flex-direction: row;
@@ -44,10 +45,10 @@ html, body {
   position: relative;
 }
 
-/* Default image sizing and centering */
+/* Image styling */
 .gallery img {
   max-width: 100vw;
-  max-height: 92vh;
+  max-height: 92vh; /* a bit less than full viewport height */
   width: auto;
   height: auto;
   object-fit: contain;
@@ -55,9 +56,9 @@ html, body {
   margin: 0 auto;
   position: absolute;
   left: 50%;
-  top: 48%;
+  top: 48%; /* slightly above vertical center */
   transform: translate(-50%, -50%);
-  background: #000;
+  background: transparent; /* no black background behind images */
   user-select: none;
   -webkit-user-drag: none;
   pointer-events: none;
@@ -67,28 +68,13 @@ html, body {
   transition: opacity 0.35s cubic-bezier(.76,0,.24,1);
 }
 
+/* Show the active image with full opacity */
 .gallery img.active {
   opacity: 1;
   z-index: 2;
 }
 
-/* Nav zones for prev/next navigation */
-@media (max-width: 600px) {
-  .nav-zone {
-    width: 50vw;
-  }
-  .nav-left { left: 0; background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
-  .nav-right { right: 0; background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
-}
-
-@media (min-width: 601px) {
-  .nav-zone {
-    width: calc(50vw - 2px);
-  }
-  .nav-left { left: 2px; background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
-  .nav-right { right: 2px; background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0)); }
-}
-
+/* Navigation zones - clickable areas for prev/next */
 .nav-zone {
   position: fixed;
   top: 0;
@@ -98,16 +84,47 @@ html, body {
   cursor: pointer;
 }
 
-/* On mobile: shrink image further and push higher */
+/* Navigation zones width and background gradient */
+@media (max-width: 600px) {
+  .nav-zone {
+    width: 50vw;
+  }
+  .nav-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0));
+  }
+  .nav-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0));
+  }
+}
+
+@media (min-width: 601px) {
+  .nav-zone {
+    width: calc(50vw - 2px);
+  }
+  .nav-left {
+    left: 2px;
+    background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0));
+  }
+  .nav-right {
+    right: 2px;
+    background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0));
+  }
+}
+
+/* Adjust image height and vertical position for tablets */
 @media (max-width: 900px) {
   .gallery img {
     max-height: 82vh;
-    top: 46%;
+    top: 46%; /* a bit higher */
   }
 }
+
+/* Adjust image height and vertical position for mobiles */
 @media (max-width: 600px) {
   .gallery img {
     max-height: 70vh;
-    top: 42%;
+    top: 42%; /* a tad higher than tablets */
   }
 }
