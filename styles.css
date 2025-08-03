@@ -50,27 +50,15 @@ html, body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 50vw;
+  width: calc(50vw - 2px); /* Prevents touching browser edge */
   z-index: 2;
 }
 
 .nav-left {
-  left: 0;
+  left: 2px; /* Pull in from absolute edge */
   background: linear-gradient(to right, rgba(0,0,0,0.08), rgba(0,0,0,0));
 }
 
 .nav-right {
-  right: 0;
-  background: linear-gradient(to left, rgba(0,0,0,0.08), rgba(0,0,0,0));
-}
-
-.nav-left:hover {
-  cursor: w-resize;
-}
-.nav-right:hover {
-  cursor: e-resize;
-}
-
-@media (max-width: 600px) {
-  .info-btn img { height: 80px; }
-}
+  right: 2px; /* Pull in from absolute edge */
+  background: linear-gradient(to left
