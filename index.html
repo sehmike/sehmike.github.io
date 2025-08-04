@@ -1,82 +1,224 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Michael Seh" />
-  <title>michaelseh.com</title>
+<title>Nyxt browser: The hacker&#039;s browser</title>
 
-  <meta content="michaelseh.com" property="og:title" />
-  <meta name="description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com." />
-  <meta property="og:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com." />
-  <meta property="og:url" content="https://michaelseh.com" />
-  <meta property="og:site_name" content="michaelseh.com" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:title" content="michaelseh.com" />
-  <meta name="twitter:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com." />
-  <meta name="twitter:url" content="https://michaelseh.com" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
-  <meta name="msapplication-TileColor" content="#603cba" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="preload" href="https://michaelseh.com/styles.css" as="style" />
-  <link rel="stylesheet" href="https://michaelseh.com/styles.css" />
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/pure-min.css">
+  </link>
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/grids-responsive.css">
+  </link>
+  <link rel="stylesheet" type="text/css" media="screen" href="/static/css/main.css">
+  </link>
 </head>
 
 <body>
-  <div class="centered-container">
+  <header>
+    <div class="menu-header flex-container">
+      <div class="menu-brand"><a href="/"><img src="/image/nyxt_square_corner_128x128.png" alt="Nyxt Logo" /></a></div>
+      <div class="sub-menu"><a href="/faq" class="pure-menu-link" target="_self">FAQ</a><a href="/documentation" class="pure-menu-link" target="_self">Manual</a><a href="/purchase" class="pure-menu-link" target="_self">Download</a></div>
+      <div class="sub-menu"><a href="/articles/video" class="pure-menu-link" target="_self">Videos</a><a href="/articles" class="pure-menu-link" target="_self">Articles</a></div>
+      <div class="sub-menu"><a href="https://kiwiirc.com/nextclient/irc.libera.chat/nyxt" class="pure-menu-link" target="_blank">IRC Chat</a><a href="https://discord.gg/YXCk7gDKgJ" class="pure-menu-link" target="_blank">Discord Chat</a><a href="https://github.com/atlas-engineer/nyxt" class="pure-menu-link" target="_blank">Source</a></div>
+      <div class="sub-menu"><a href="/feed" class="pure-menu-link" target="_self">Feed</a><a href="/newsletter" class="pure-menu-link" target="_self">Newsletter</a><a href="/extensions" class="pure-menu-link" target="_self">Extensions</a></div>
+      <div class="sub-menu"><a href="/login" class="pure-menu-link" target="_self">Login</a></div>
+    </div>
+  </header>
+  <main>
+    <style>
+      .menu-header {
+        border-bottom: none;
+      }
+    </style>
 
-    <!-- Footer image on top? If you want it at bottom, move below -->
-    <img src="https://michaelseh.com/footer.jpg" width="300" height="30" alt="footer" />
-    
-    <hr />
-    
-    <div class="news-box">
-      <div class="news-header">NEWS</div>
-      <div class="news-content">
-        <p>
-          <span class="news-highlight">
-            <img src="https://michaelseh.com/pfeil.gif" width="10" height="10" alt="pfeil" /> NEW UPDATE
-          </span>
-          <br />
-          It took a long time to present the updated version of <a href="https://michaelseh.com/">michaelseh.com</a>, but as you can guess I spend a lot of time in developing new websites and projects.
-        </p>
+    <h1 class='headline-title'>Nyxt:</h1>
+    <h2 class='headline-message'>the hacker's browser.</h2>
 
-        <p>
-          <span class="news-highlight">
-            <img src="https://michaelseh.com/pfeil.gif" width="10" height="10" alt="pfeil" /> REDHELLOLABEL.COM
-          </span>
-          <br />
-          Custom stickers made easy.
-        </p>
+    <div class="headline-summary">
+      <p>Never leave the keyboard. Quickly analyze, navigate, and extract
+        information from the Internet.
+      </p>
+      <br />
 
-        <p>
-          The first red hello label sticker, that really slaps, and if you don't believe, then check out the <a href="https://redhellolabel.com/">design</a>.
-        </p>
+      <a class='pure-button pure-button-primary headline-button' href='/purchase'>Download</a>
+      <a class='pure-button headline-button' href='/faq'>FAQ</a>
+      <a class='pure-button headline-button' href='/articles'>Articles</a>
 
-        <div style="text-align:center;">
-          <a href="https://redhellolabel.com/">
-            <img src="https://michaelseh.com/Red-Hello-Label.png" width="240" height="144" alt="Red-Hello-Label" border="1" />
-          </a>
-        </div>
+    </div>
 
-        <p>
-          <span class="news-highlight">
-            <img src="https://michaelseh.com/pfeil.gif" width="10" height="10" alt="pfeil" /> WANNA WORK TOGETHER?
-          </span>
-          <br />
-          mail at michaelseh dot com
+    <!-- Features -->
+    <a name='features'></a>
+    <div class='feature'>
+      <div>
+        <a name='link'></a>
+        <h3 class='feature-message'>Never leave the keyboard with powerful link hinting.</h3>
+        <p class='feature-description'>Speed up the process as you follow
+          links with your keyboard. In this example we follow a link to view
+          a page about <i>Aerodynamic Forces</i>, without resorting to the mouse
+          pointer.
         </p>
       </div>
+      <div>
+        <img src='/image/animation/element-hint.png' alt='The user using element hints. Element hints display a
+              character shortcode next to each element on the page. The
+              user can then type in that shortcode to interact with said
+              element.'>
+      </div>
     </div>
-    
-    <hr />
-    
-    <h5>Users should understand that nothing on this site promotes or condones illegal activities.</h5>
-  </div>
+
+    <div class='feature'>
+      <div>
+        <a name='jump'></a>
+        <h3 class='feature-message'>Quickly navigate documents with Jump Headings.</h3>
+        <p class='feature-description'>Immediately skip to important
+          chapters with Jump Headings by fuzzily searching through header
+          tags. In this example we jump to the section: <i>Intelligence and
+            Learning</i>.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/jump-heading.png' alt='The user using fuzzy search to jump around between
+              headings. The user types in any characters that appear in a
+              heading, and the browser jumps to that position in the
+              document.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <a name='fuzzy'></a>
+        <h3 class='feature-message'>Instantly switch between your tabs.</h3>
+        <p class='feature-description'>Easily find relevant tabs with a
+          fuzzy search. In this example we have 11 open tabs, and we
+          narrow this group with each keystroke.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/switch-buffer.png' alt='The user using a fuzzy search to switch between many
+              buffers. This allows them to jump to any tab instantly.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <a name='fuzzy'></a>
+        <h3 class='feature-message'>Find the right info the first time with multi-tab search.</h3>
+        <p class='feature-description'>Search multiple tabs
+          simultaneously. In this example we look for the diet of penguins
+          across several pages at once.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/search-buffers.png' alt='The user searching multiple tabs at once.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <a name='map'></a>
+        <h3 class='feature-message'>Avoid tedious repetition by selecting groups of tabs.</h3>
+        <p class='feature-description'>Run commands against multiple tabs
+          to avoid repeating yourself. In the example below we finish our
+          online research of elephants by selecting and closing all webpages
+          that match the string "ele".
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/kill-buffers.png' alt='The user killing buffers. The user can type
+              in a string to match and select multiple objects (in this
+              case buffers), and then the user can apply an operation
+              against those multiple objects.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <h3 class='feature-message'>Execute commands easily.</h3>
+        <p class='feature-description'>Fuzzy search relevant commands to
+          instantly run them. No more digging through menus.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/execute-commands.png' alt='The user executing a command by just specifying its
+              name.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <h3 class='feature-message'>Built-in programmability.</h3>
+        <p class='feature-description'>Use the built-in REPL to program
+          Nyxt. Run short scripts, and try out new workflows. Everything
+          in Nyxt is fully extensible and modifiable.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/lisp-repl.png' alt='The user using the Lisp REPL to list the buffers.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <a name='smart'></a>
+        <h3 class='feature-message'>Smart bookmark search.</h3>
+        <p class='feature-description'>Use the prompt buffer to
+          intelligently search your tagged bookmarks.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/bookmark-search.png' alt='The user searching through their bookmarks by keywords and tags.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <h3 class='feature-message'>Customizable autofills.</h3>
+        <p class='feature-description'>Use autofills to fill in
+          forms. Autofills can be functions or plain strings. In the case
+          of functions, you can make them intelligent. For example, you may
+          want an autofill to fill in the current date.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/auto-fill.png' alt='The user using autofills. Autofills are shortcodes to
+              operations that can fill in input fields.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <h3 class='feature-message'>Clipboard history.</h3>
+        <p class='feature-description'>Anything you copy is remembered so
+          that you can re-paste it at any time. No more looking for the
+          'last thing' you pasted!
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/paste-ring.png' alt='The user pasting from their clipboard history.'>
+      </div>
+    </div>
+
+    <div class='feature'>
+      <div>
+        <a name='tree'></a>
+        <h3 class='feature-message'>Lossless tree history.</h3>
+        <p class='feature-description'>A tree based history ensures that
+          you never lose track of where you've been. All pages you've
+          visited are stored in a tree that you can traverse and search. No
+          more losing items in your history.
+        </p>
+      </div>
+      <div>
+        <img src='/image/animation/history.png' alt='An image of the tree like structure that is used to
+              represent history.'>
+      </div>
+    </div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="pure-menu footer-menu"><a href="/legal" class="pure-menu-link" target="_self">Legal</a><a href="/contact" class="pure-menu-link" target="_self">Contact</a><a href="https://atlas.engineer/about" class="pure-menu-link" target="_blank">About us</a><a href="https://store.nyxt.atlas.engineer/" class="pure-menu-link" target="_blank">Store</a><a href="/developer/login" class="pure-menu-link" target="_self">Developer Login</a></div>
+  </footer>
 </body>
+
 </html>
