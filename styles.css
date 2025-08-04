@@ -2,6 +2,7 @@ body {
   background: url('https://michaelseh.com/htg-run.gif') repeat fixed;
   margin: 0;
   font-family: Arial, sans-serif;
+<<<<<<< HEAD
 
   /* Center container horizontally and allow vertical scroll */
   display: flex;
@@ -9,30 +10,38 @@ body {
   padding: 40px 0 20px 0; /* reduced bottom padding */
   min-height: 100vh;
   box-sizing: border-box;
+=======
+>>>>>>> parent of 924d2f6 (centered)
 }
 
 .centered-container {
-  width: 90%;
-  max-width: 420px;
+  width: 420px;
+  margin: 40px auto 0 auto;
   text-align: left;
+<<<<<<< HEAD
   padding: 20px 24px 8px 24px; /* reduced bottom padding */
   box-sizing: border-box;
   border-radius: 6px;
+=======
+  padding: 20px 24px 12px 24px;
+>>>>>>> parent of 924d2f6 (centered)
 }
 
 hr {
   border: none;
   border-top: 1px solid #222;
   margin: 22px 0;
+<<<<<<< HEAD
 }
 
 .centered-container hr:last-of-type {
   margin-bottom: 12px; /* reduce bottom margin of last hr */
+=======
+>>>>>>> parent of 924d2f6 (centered)
 }
 
 .news-box {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   margin: 0 auto 16px auto;
   background: black;
   padding: 1px;
