@@ -314,7 +314,7 @@ ul.article-list a:active {
 
 .headline-summary {
     margin-bottom: 64px;
-    font-family: "Public Sans"
+    font-family: Arial, sans-serif;
 }
 
 .headline-summary>p {
@@ -481,7 +481,7 @@ details {
 summary {
     font-size: 140%;
     font-weight: 500;
-    font-family: "Public Sans";
+    font-family: Arial, sans-serif;
 }
 
 .voted {
