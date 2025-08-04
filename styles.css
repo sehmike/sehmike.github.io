@@ -7,15 +7,15 @@ body {
   padding: 40px 0 20px 0; /* reduced bottom padding */
   min-height: 100vh;
   box-sizing: border-box;
+}
 
 .centered-container {
   width: 420px;
   margin: 40px auto 0 auto;
   text-align: left;
-  padding: 20px 24px 8px 24px; /* reduced bottom padding */
+  padding: 20px 24px 12px 24px; /* reduced bottom padding */
   box-sizing: border-box;
   border-radius: 6px;
-  padding: 20px 24px 12px 24px;
 }
 
 hr {
@@ -31,7 +31,7 @@ hr {
 .news-box {
   width: 300px;
   margin: 0 auto 16px auto;
-  background: black;
+  background: white; /* changed from black */
   padding: 1px;
   border-radius: 1px;
 }
@@ -40,11 +40,12 @@ hr {
   padding: 10px 14px 24px 14px;
   border-radius: 4px;
   font-size: 1rem;
+  color: black; /* ensure text is black for readability */
 }
 
 .news-header {
-  background: black;
-  color: white;
+  background: white; /* changed from black */
+  color: black; /* changed from white */
   text-align: center;
   font-weight: bold;
   padding: 6px 0;
@@ -63,4 +64,17 @@ h5 {
   opacity: 0.80;
   margin: 0.7em 0 1.5em 0;
   margin-bottom: 8px;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+  .centered-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 16px 12px;
+  }
+  
+  .news-box {
+    width: 100%;
+  }
 }
