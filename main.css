@@ -47,7 +47,6 @@ footer {
     border-top-right-radius: 2px;
 }
 
-/* Pure button override styles */
 .pure-button {
     background-color: #d42d26 !important;
     color: white !important;
