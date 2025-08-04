@@ -2,10 +2,12 @@ body {
   background: url('https://michaelseh.com/htg-run.gif') repeat fixed;
   margin: 0;
   font-family: Arial, sans-serif;
+
+  /* Center container horizontally and allow vertical scroll */
   display: flex;
   justify-content: center;
-  padding: 40px 0 20px 0;
-  min-height: 70vh;
+  padding: 40px 0 20px 0; /* reduced bottom padding */
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -13,7 +15,7 @@ body {
   width: 90%;
   max-width: 420px;
   text-align: left;
-  padding: 20px 24px 8px 24px;
+  padding: 20px 24px 8px 24px; /* reduced bottom padding */
   box-sizing: border-box;
   border-radius: 6px;
 }
@@ -25,7 +27,7 @@ hr {
 }
 
 .centered-container hr:last-of-type {
-  margin-bottom: 12px;
+  margin-bottom: 12px; /* reduce bottom margin of last hr */
 }
 
 .news-box {
@@ -38,7 +40,6 @@ hr {
 }
 
 .news-content {
-  background: white;
   padding: 10px 14px 24px 14px;
   border-radius: 4px;
   font-size: 1rem;
