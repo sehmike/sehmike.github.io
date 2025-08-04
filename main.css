@@ -1,115 +1,3 @@
-@charset "UTF-8";
-
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Public Sans'), url('/font/PublicSans-Regular.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: local('Public Sans'), url('/font/PublicSans-Italic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 100;
-    src: local('Public Sans'), url('/font/PublicSans-Thin.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 100;
-    src: local('Public Sans'), url('/font/PublicSans-ThinItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 200;
-    src: local('Public Sans'), url('/font/PublicSans-ExtraLight.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 200;
-    src: local('Public Sans'), url('/font/PublicSans-ExtraLightItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 300;
-    src: local('Public Sans'), url('/font/PublicSans-Light.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 300;
-    src: local('Public Sans'), url('/font/PublicSans-LightItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 500;
-    src: local('Public Sans'), url('/font/PublicSans-Medium.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 500;
-    src: local('Public Sans'), url('/font/PublicSans-MediumItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 600;
-    src: local('Public Sans'), url('/font/PublicSans-SemiBold.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 600;
-    src: local('Public Sans'), url('/font/PublicSans-SemiBoldItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: local('Public Sans'), url('/font/PublicSans-Bold.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 700;
-    src: local('Public Sans'), url('/font/PublicSans-BoldItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 800;
-    src: local('Public Sans'), url('/font/PublicSans-ExtraBold.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 800;
-    src: local('Public Sans'), url('/font/PublicSans-ExtraBoldItalic.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: normal;
-    font-weight: 900;
-    src: local('Public Sans'), url('/font/PublicSans-Black.woff') format('woff');
-}
-@font-face {
-    font-family: 'Public Sans';
-    font-style: italic;
-    font-weight: 900;
-    src: local('Public Sans'), url('/font/PublicSans-BlackItalic.woff') format('woff');
-}
-
-
 body {
     margin: auto;
     padding-left: 18px;
@@ -160,8 +48,7 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6, h7 {
-    font-family: "Public Sans";
-    font-weight: bold;
+    font-family: Arial, sans-serif;
     color: #393939;
 }
 
@@ -412,7 +299,7 @@ ul.article-list a:active {
 }
 
 .headline-title {
-    font-size: 400%;
+    font-size: 300%;
     margin-bottom: 0;
     font-weight: bold;
     color: black;
