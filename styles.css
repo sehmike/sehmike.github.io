@@ -2,29 +2,33 @@ body {
   background: url('https://michaelseh.com/htg-run.gif') repeat fixed;
   margin: 0;
   font-family: Arial, sans-serif;
+
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .centered-container {
-  width: 420px;
-  margin: 40px auto 0 auto;
+  width: 90%;
+  max-width: 420px;
   text-align: left;
   padding: 20px 24px 12px 24px;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid #222;
-  margin: 22px 0;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .news-box {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   margin: 0 auto 16px auto;
   background: black;
   padding: 1px;
   border-radius: 1px;
 }
 
+/* The rest unchanged */
 .news-content {
   background: white;
   padding: 10px 14px 24px 14px;
