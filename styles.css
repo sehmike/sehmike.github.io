@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 40px 0 20px 0;
-  min-height: 100vh;
+  min-height: 70vh;
   box-sizing: border-box;
 }
 
