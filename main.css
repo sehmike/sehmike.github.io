@@ -4,10 +4,14 @@ body {
     padding-right: 18px;
     padding-top: 32px;
     max-width: 115ch;
-    display:flex;
-    min-height:100vh;
-    flex-direction:column;
-    box-sizing:border-box;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('https://michaelseh.com/run.gif');
+    background-repeat: repeat;
+    background-position: top left;
+    background-size: auto;
 }
 
 video {
@@ -22,7 +26,7 @@ blockquote {
 }
 
 .menu-header {
-    background-color: white;
+    background-color: transparent;
 }
 
 main {
@@ -31,17 +35,31 @@ main {
 
 footer {
     border: none;
-    margin-top:auto;
+    margin-top: auto;
     font-size: 14px;
     padding-bottom: 0em;
+    border-top: none !important;
 }
 
 .footer-menu {
     background-color: rgb(250,250,250);
-    border-top-left-radius:2px;
-    border-top-right-radius:2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
+/* Pure button override styles */
+.pure-button {
+    background-color: #d42d26 !important;
+    color: white !important;
+    border: none !important;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.pure-button:hover {
+    background-color: #ff0000 !important;
+    color: white !important;
+}
 
 h1 {
     font-size: 175%;
@@ -61,14 +79,14 @@ h1, h2, h3, h4, h5, h6, h7 {
 }
 
 .contact-message {
-    background-color:#ececec;
+    background-color: #ececec;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 3px;
 }
 
 .transaction {
-    background-color:#ececec;
+    background-color: #ececec;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 3px;
@@ -92,7 +110,7 @@ select {
 }
 
 .pure-menu-heading-icon {
-    padding:0em;
+    padding: 0em;
 }
 
 .pure-menu-heading img {
@@ -105,59 +123,46 @@ select {
 }
 
 @media only screen and (max-width: 768px) {
-
     #purchase-form > input {
         margin-top: 12px;
         margin-bottom: 12px;
     }
-
     .sub-menu a {
         display: inline-block;
     }
-
     .menu-brand {
         display: inline-block;
         float: right;
         padding-right: 12px;
     }
-
-
     main {
         padding-left: 18px;
         padding-right: 18px;
     }
-
     blockquote {
         margin-left: 0;
         margin-right: 0;
     }
-
     .sub-menu li {
         display: inline-block;
     }
-
     .sub-menu {
         border-bottom: 1px solid white;
     }
-
     .pure-menu-link {
         padding: 0.5em 12px;
     }
-
     .pure-form input {
         width: 100%;
         margin-bottom: 1em;
     }
-
     select {
         width: 100%;
     }
-
     .pure-form textarea {
         width: 100%;
         height: 20ch;
     }
-
     body {
         padding: 0;
     }
@@ -276,13 +281,13 @@ ul.article-list a:active {
 }
 
 .download-heading {
-    display:inline-block;
+    display: inline-block;
     font-size: 100%;
     margin: 0;
 }
 
 .faq-heading {
-    display:inline;
+    display: inline;
     font-size: 100%;
     margin: 0;
 }
@@ -317,7 +322,7 @@ ul.article-list a:active {
     font-family: Arial, sans-serif;
 }
 
-.headline-summary>p {
+.headline-summary > p {
     font-size: 18px;
 }
 
@@ -407,7 +412,7 @@ hr {
     }
 
     footer {
-        border-top: 2px solid rgb(244, 244, 244);
+        border-top: none !important;
         padding-bottom: 1em;
     }
 
@@ -461,7 +466,7 @@ hr {
         margin-bottom: 124px;
     }
 
-    .headline-summary>p {
+    .headline-summary > p {
         font-size: 30px;
     }
 
@@ -486,8 +491,8 @@ summary {
 
 .voted {
     background-color: rgb(247, 247, 247);
-    padding:2px;
-    border-radius:3px;
+    padding: 2px;
+    border-radius: 3px;
 }
 
 .invisible {
@@ -503,7 +508,7 @@ details summary:before {
     margin-right: 5px;
     content: "+";
     color: 808080;
-    text-align:center;
+    text-align: center;
 }
 
 details summary:hover {
@@ -515,7 +520,7 @@ details summary {
 }
 
 details[open] summary:before {
-    content: "âˆ’";
+    content: "−";
 }
 
 #extensions {
@@ -547,26 +552,7 @@ pre > code {
     padding-top: 30px;
 }
 
-#purchase-form > button {
-    margin: 6px;
-    
-}
-
-#purchase-form > .pure-button {
-    margin-right: 6px;
-    margin-top: 3px;
-}
-
 ul {
     margin-top: 4px;
     margin-bottom: 4px;
-
-}
-
-#purchase-form > input {
-    margin-right: 6px;
-}
-
-#purchase-form > #submit {
-    margin-left: 0;
 }
