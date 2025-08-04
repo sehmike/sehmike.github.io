@@ -7,6 +7,23 @@ body {
   padding: 40px 0 20px 0; /* reduced bottom padding */
   min-height: 100vh;
   box-sizing: border-box;
+  flex-direction: column; /* allow stacking top bar and container */
+  align-items: center;   /* center all children horizontally */
+}
+
+.top-image-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* center the image horizontally */
+  padding: 10px 0;
+  background: transparent; /* adjust background if needed */
+  box-sizing: border-box;
+}
+
+.top-image-bar img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .centered-container {
