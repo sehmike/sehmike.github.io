@@ -299,7 +299,7 @@ ul.article-list a:active {
 }
 
 .headline-title {
-    font-size: 200%;
+    font-size: 400%;
     margin-bottom: 0;
     font-weight: bold;
     color: black;
@@ -449,7 +449,7 @@ hr {
 
     .headline-title {
         margin-top: 64px;
-        font-size: 600%;
+        font-size: 400%;
     }
 
     .headline-message {
