@@ -2,10 +2,9 @@ body {
   background: url('https://michaelseh.com/htg-run.gif') repeat fixed;
   margin: 0;
   font-family: Arial, sans-serif;
-
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding: 40px 0 20px 0;
   min-height: 100vh;
   box-sizing: border-box;
 }
@@ -14,9 +13,19 @@ body {
   width: 90%;
   max-width: 420px;
   text-align: left;
-  padding: 20px 24px 12px 24px;
+  padding: 20px 24px 8px 24px;
   box-sizing: border-box;
-  background: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #222;
+  margin: 22px 0;
+}
+
+.centered-container hr:last-of-type {
+  margin-bottom: 12px;
 }
 
 .news-box {
@@ -28,7 +37,6 @@ body {
   border-radius: 1px;
 }
 
-/* The rest unchanged */
 .news-content {
   background: white;
   padding: 10px 14px 24px 14px;
@@ -56,4 +64,5 @@ h5 {
   color: #333;
   opacity: 0.80;
   margin: 0.7em 0 1.5em 0;
+  margin-bottom: 8px;
 }
