@@ -1,0 +1,1 @@
+window.onload=function(){var e=/iPhone|iPad|iPod/i.test(navigator.userAgent),t=/Android/i.test(navigator.userAgent),i="https://michaelseh.com/Michael_Seh_Information_2025.pdf";if(e||t)window.location.href=i;else{var o=document.getElementById("pdf-embed");o.src=i,o.style.display="block"}};
