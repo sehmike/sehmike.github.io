@@ -1,1 +1,65 @@
-html,body{height: 100%;margin: 0;padding: 0;overflow: hidden}iframe{width: 100vw;height: 100vh;border: none;display: none}
+a {
+  text-decoration: none;
+}
+.bodytextsmall {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-style: normal;
+  line-height: normal;
+  font-weight: normal;
+  font-variant: normal;
+  color: #000000;
+  text-decoration: none;
+}
+.headingREALLYBIG {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #000000;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+.TEXT {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #000000;
+  text-decoration: none;
+}
+.HEADING {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+.SUBHEADER {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+a:hover {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #999999;
+}
+.linksmall {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  color: #999999;
+  text-decoration: none;
+}
+.linkbig {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100px;
+  color: #999999;
+  text-decoration: none;
+  line-height: 65pt;
+}
+.linksmed {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #999999;
+  text-decoration: none;
+}
