@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Seh</title>
+  <meta property="og:title" content="michaelseh.com">
+  <meta name="description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
+  <meta property="og:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
+  <meta property="og:url" content="https://michaelseh.com">
+  <meta property="og:site_name" content="michaelseh.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:title" content="michaelseh.com">
+  <meta name="twitter:description" content="Michael Seh lives and works in Los Angeles. To learn more about him, try Google or mail@michaelseh.com.">
+  <meta name="twitter:url" content="https://michaelseh.com">
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <img id="iphone-img" class="device-img" src="iPhone-image.jpg" alt="Viewing on iPhone">
+  <img id="ipad-img" class="device-img" src="iPad-image.jpg" alt="Viewing on iPad">
+  <img id="macbook-img" class="device-img" src="MacBook-image.jpg" alt="Viewing on MacBook">
+
+  <nav class="navbar">
+    <button class="email" type="button" onclick="location.href='mailto:mail@michaelseh.com'">
+      email me
+    </button>
+  </nav>
+
+  <script>
+    function detectDevice() {
+      const ua = navigator.userAgent.toLowerCase();
+      const iphone = /iphone/.test(ua);
+      const ipad = /ipad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      const macbook = /macintosh/.test(ua) && !iphone && !ipad;
+      if (iphone) {
+        document.getElementById('iphone-img').style.display = 'block';
+      } else if (ipad) {
+        document.getElementById('ipad-img').style.display = 'block';
+      } else if (macbook) {
+        document.getElementById('macbook-img').style.display = 'block';
+      } else {
+        document.getElementById('macbook-img').style.display = 'block';
+      }
+    }
+    detectDevice();
+  </script>
+
+</body>
+
+</html>
