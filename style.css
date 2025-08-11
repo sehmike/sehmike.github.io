@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'IBMPlexMono-Regular';
+    src: url('IBMPlexMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'IBMPlexMono-Regular', monospace;
+    background-color: #fff;
+    color: #000080;
+    margin: 0;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+main {
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+
+.tagline {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    background: rgba(255,255,0,0.2);
+    padding: 4px;
+    border: 1px dashed #000;
+    white-space: nowrap;
+}
+
+.hire-link-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.hire-link {
+    font-size: 1.4rem;
+    color: blue;
+    background: yellow;
+    padding: 5px 15px;
+    border: 3px solid red;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hire-link:hover {
+    background: magenta;
+    color: white;
+}
