@@ -14,6 +14,7 @@
   transition: background-color 0.3s ease;
   z-index: 1000;
 }
+
 .navbar .email:hover {
   background-color: #eee;
 }
@@ -26,9 +27,16 @@
 
 .device-img {
   display: none;
-  width: 100vw;
-  height: 100vh;
+  width: 50vw;
+  height: 50vh;
   object-fit: cover;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  .device-img {
+    display: block;
+    margin: auto;
+  }
 }
