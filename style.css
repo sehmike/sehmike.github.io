@@ -1,11 +1,11 @@
 .navbar .email {
   background: #fff;
   border: none;
-  bottom: 2rem;
   cursor: pointer;
-  margin-left: 1em;
   position: fixed;
-  right: 2rem;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 0.6em 1em;
   font-size: 0.8rem;
   font-family: sans-serif;
@@ -14,6 +14,8 @@
   transition: background-color 0.3s ease;
   z-index: 1000;
   color: inherit;
+  margin-left: 0;
+  right: auto;
 }
 
 .navbar .email:hover {
@@ -29,7 +31,6 @@
     padding: 0.4em 0.8em;
     font-size: 0.7rem;
     bottom: 1.5rem;
-    right: 1.5rem;
   }
   .device-img {
     display: block;
@@ -42,7 +43,6 @@
     padding: 0.5em 0.9em;
     font-size: 0.75rem;
     bottom: 1.8rem;
-    right: 1.8rem;
   }
   .device-img {
     display: block;
