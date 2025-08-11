@@ -20,33 +20,33 @@
 
 <body>
 
-  <img id="iphone-img" class="device-img" src="iPhone-image.jpg" alt="Viewing on iPhone">
-  <img id="ipad-img" class="device-img" src="iPad-image.jpg" alt="Viewing on iPad">
-  <img id="macbook-img" class="device-img" src="MacBook-image.jpg" alt="Viewing on MacBook">
-
   <nav class="navbar">
-    <button class="email" type="button" onclick="location.href='mailto:mail@michaelseh.com'">
-      email me
-    </button>
+    <button class="email" id="emailBtn">Email Me</button>
   </nav>
 
+  <img id="deviceImg" src="" alt="Device Example" class="device-img" />
+
   <script>
-    function detectDevice() {
-      const ua = navigator.userAgent.toLowerCase();
-      const iphone = /iphone/.test(ua);
-      const ipad = /ipad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-      const macbook = /macintosh/.test(ua) && !iphone && !ipad;
-      if (iphone) {
-        document.getElementById('iphone-img').style.display = 'block';
-      } else if (ipad) {
-        document.getElementById('ipad-img').style.display = 'block';
-      } else if (macbook) {
-        document.getElementById('macbook-img').style.display = 'block';
+    document.getElementById('emailBtn').addEventListener('click', function() {
+      window.location.href = "mailto:youraddress@example.com?subject=Hello";
+    });
+
+    function setDeviceImage() {
+      const img = document.getElementById('deviceImg');
+      const width = window.innerWidth;
+      if (width <= 767) {
+        // Phones (iPhone & Android)
+        img.src = 'iPhone-image.jpg';
+      } else if (width >= 768 && width <= 1024) {
+        // Desktops/MacBooks
+        img.src = 'MacBook-image.jpg';
       } else {
-        document.getElementById('macbook-img').style.display = 'block';
+        // Tablets (iPad & Android tablets)
+        img.src = 'iPad-image.jpg';
       }
     }
-    detectDevice();
+    window.addEventListener('load', setDeviceImage);
+    window.addEventListener('resize', setDeviceImage);
   </script>
 
 </body>
