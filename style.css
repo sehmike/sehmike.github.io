@@ -1,3 +1,4 @@
+/* Email button inside navbar */
 .navbar .email {
   background: #fff;
   border: none;
@@ -13,35 +14,37 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
   z-index: 1000;
-  color: inherit;
+  color: inherit; /* Default text color */
 }
 
 .navbar .email:hover {
   background-color: #eee;
 }
 
+/* Mobile / small screen adjustments */
 @media (max-width: 767px) {
   .navbar {
     display: flex;
   }
 
+  /* Black text for email button on mobile/iPad */
   .navbar .email {
     color: #000;
   }
 }
 
+/* Device image - 50% size for all devices, centered slightly above middle */
 .device-img {
-  display: none;
-  width: 50vw;
-  height: 50vh;
-  object-fit: cover;
+  position: fixed;             /* Position relative to viewport */
+  top: 45%;                    /* Slightly above perfect vertical center */
+  left: 50%;                   /* Horizontal center */
+  transform: translate(-50%, -50%); /* Center adjustment */
+  width: 50vw;                  /* 50% of viewport width */
+  height: 50vh;                 /* 50% of viewport height */
+  object-fit: contain;          /* Show all of the image with white space */
+  background-color: #fff;       /* White background around image */
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 767px) {
-  .device-img {
-    display: block;
-    margin: auto;
-  }
+  display: block;               /* Always visible */
+  z-index: 999;                 /* Above most elements */
 }
