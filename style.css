@@ -13,6 +13,7 @@
   border-radius: 4px;
   transition: background-color 0.3s ease;
   z-index: 1000;
+  color: inherit;
 }
 
 .navbar .email:hover {
@@ -22,6 +23,10 @@
 @media (max-width: 767px) {
   .navbar {
     display: flex;
+  }
+
+  .navbar .email {
+    color: #000;
   }
 }
 
