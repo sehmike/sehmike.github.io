@@ -1,1 +1,89 @@
-html, body {height: 100%;margin: 0;font: normal 12px arial, sans-serif;text-align: center;overflow-x: hidden;}body {display: flex;flex-direction: column;align-items: center;justify-content: space-between;}h1, h2, h3, h4, h5, h6 {margin-top: 10px;margin-bottom: 10px;font-family: arial, sans-serif;text-align: left;}.asset-body {display: flex;flex-wrap: wrap;justify-content: center;gap: 20px;padding: 20px;flex: 1;width: 100%;box-sizing: border-box;}.bk-list {display: flex;justify-content: center;align-items: flex-start;text-align: left;width: 200px;margin: 35px;}.bk-image {margin-right: 10px;}.bk-image img {border: 1px solid #000;}.bk-description {margin: 5px 5px;}h3.bk-title {font-size: 13px;font-weight: bold;margin: 5px 0px;}.footer {background-color: #fff;color: #000;text-align: center;padding: 10px;width: 100%;}.footer-menu {font-size: 16px;font-weight: bold;}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font: normal 12px arial, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: arial, sans-serif;
+  text-align: left;
+}
+
+.asset-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+}
+
+.bk-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  width: 200px;
+  margin: 30px;
+}
+
+.bk-image {
+  margin-right: 10px;
+}
+
+.bk-image img {
+  border: 1px solid #000;
+}
+
+.bk-description {
+  margin: 5px 5px;
+  margin-top: -10px;
+}
+
+.bk-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 5px 0px;
+  margin-top: 15px;
+}
+
+.footer {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: -20px;
+  position: relative;
+  top: -5px;
+  padding-top: 55px;
+  padding-bottom: 30px;
+}
+
+.footer-menu {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: -5px;
+  position: relative;
+  top: -5px;
+}
