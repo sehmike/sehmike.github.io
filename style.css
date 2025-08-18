@@ -67,6 +67,29 @@ h6 {
   margin-top: 15px;
 }
 
+.site-header {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  display: inline-block;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    max-width: 90px;
+  }
+}
+
 .footer {
   background-color: #fff;
   color: #000;
