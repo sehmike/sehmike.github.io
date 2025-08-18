@@ -87,3 +87,21 @@ h6 {
   position: relative;
   top: -5px;
 }
+.fullscreen,
+.splash {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white url("/logo-116x116.jpg") center center no-repeat;
+  background-size: 116px 190px;
+  z-index: 12000;
+}
+
+@media only screen and (min-device-pixel-ratio: 1.5) {
+  .fullscreen,
+  .splash {
+    background-image: url("/logo-232x232.jpg");
+  }
+}
