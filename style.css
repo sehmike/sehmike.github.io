@@ -78,6 +78,11 @@ h6 {
   display: inline-block;
 }
 
+.flipped-mirrored {
+  display: inline-block;
+  transform: scaleX(-1) scaleY(-1);
+}
+
 @media (max-width: 1024px) {
   .logo {
     max-width: 120px;
