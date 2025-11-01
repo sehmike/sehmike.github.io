@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  touch-action: pan-y;
 }
 
 .image-text-wrapper {
@@ -30,6 +31,7 @@ body {
   margin: 0 auto;
   user-select: none;
   box-sizing: border-box;
+  touch-action: pan-x;
 }
 
 .image-container img {
@@ -117,7 +119,6 @@ body {
   transition: color 0.3s ease;
 }
 
-/* Responsive adjustments */
 @media (max-width: 800px) {
   .image-text-wrapper {
     max-width: 240px !important;
