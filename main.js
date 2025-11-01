@@ -103,12 +103,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Keyboard navigation (only if not at boundaries)
-    window.addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight' && currentIndex < images.length - 1) nextImage();
-      if (e.key === 'ArrowLeft' && currentIndex > 0) prevImage();
-    });
-
     // Initialize
     images[currentIndex].classList.add('visible');
     updateArrowState();
