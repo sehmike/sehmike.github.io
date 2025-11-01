@@ -111,7 +111,7 @@ body {
 
 @media (max-width: 600px) {
   .image-text-wrapper {
-    width: 95%;
+    width: 75%;
     margin: 0 auto 3em auto;
   }
 
