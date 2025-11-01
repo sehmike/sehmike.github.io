@@ -22,8 +22,8 @@ body {
 .image-container {
   position: relative;
   width: 100%;
-  padding-top: 83%;
-  overflow: visible; /* allow arrows outside */
+  aspect-ratio: 4 / 5;
+  overflow: visible;
   margin: 0 auto;
   user-select: none;
 }
@@ -34,7 +34,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: none;
 }
 
@@ -57,7 +57,7 @@ body {
   justify-content: center;
   color: #333;
   transition: color 0.3s ease;
-  z-index: 10; /* ensure above images */
+  z-index: 10;
   pointer-events: auto;
 }
 
@@ -68,11 +68,11 @@ body {
 }
 
 .nav-arrow.left {
-  left: -3.5em; /* outside left edge */
+  left: -3.5em;
 }
 
 .nav-arrow.right {
-  right: -3.5em; /* outside right edge */
+  right: -3.5em;
 }
 
 .description-container {
@@ -108,11 +108,25 @@ body {
 
 @media (max-width: 600px) {
   .image-text-wrapper {
-    width: 95%;
+    width: 100%;
     margin: 0 auto 3em auto;
+    padding: 0 1em;
   }
 
   .image-container {
-    padding-top: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  .nav-arrow {
+    width: 2em;
+    height: 2em;
+  }
+
+  .nav-arrow.left {
+    left: -2.2em;
+  }
+
+  .nav-arrow.right {
+    right: -2.2em;
   }
 }
