@@ -36,6 +36,8 @@ body {
   height: 100%;
   object-fit: cover;
   display: none;
+  max-width: 100%;
+  height: auto;
 }
 
 .image-container img.visible {
@@ -127,5 +129,14 @@ body {
   .nav-arrow {
     width: 2em;
     height: 2em;
+  }
+  .image-container img {
+    width: 90%;
+    height: auto;
+    position: relative;
+  }
+  .image-container {
+    padding-top: auto;
+    aspect-ratio: auto;
   }
 }
