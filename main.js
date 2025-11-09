@@ -11,12 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
     let startX = 0;
     let endX = 0;
 
-    // Add smooth transitions
     images.forEach(img => {
       img.style.transition = 'transform 0.45s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.45s ease';
     });
 
-    // Update visible image with directional animation
     function showImage(index, direction = 0) {
       if (animating || index === currentIndex) return;
       animating = true;
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 450);
     }
 
-    // Next and previous image functions
     function nextImage() {
       if (currentIndex < images.length - 1) {
         showImage(currentIndex + 1, 1);
@@ -61,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Disable inactive navigation arrows at the edges
     function updateArrowState() {
       leftArrow.style.opacity = currentIndex === 0 ? '0.3' : '1';
       leftArrow.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
@@ -69,7 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
       rightArrow.style.pointerEvents = currentIndex === images.length - 1 ? 'none' : 'auto';
     }
 
-    // Add both click and touch events for the navigation arrows
     ['click', 'touchstart'].forEach(eventType => {
       rightArrow.addEventListener(eventType, e => {
         e.preventDefault();
@@ -81,7 +76,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // Swipe gesture handling (disabled at edges)
     container.addEventListener('touchstart', e => {
       startX = e.changedTouches[0].clientX;
     });
@@ -103,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
 
-    // Initialize
     images[currentIndex].classList.add('visible');
     updateArrowState();
   });
