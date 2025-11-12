@@ -1,140 +1,36 @@
+html,
 body {
   margin: 0;
   padding: 0;
-  touch-action: pan-y;
-}
-
-.image-text-wrapper {
-  width: 100%;
-  max-width: 240px;
-  margin: 0 auto 4em auto;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.image-text-wrapper:first-of-type {
-  margin-top: 2em;
-}
-
-@media (min-width: 800px) {
-  .image-text-wrapper:first-of-type {
-    margin-top: 4em;
-  }
-}
-
-.image-container {
-  position: relative;
-  width: 100%;
-  max-width: 240px;
-  padding-top: calc(240px * 0.83);
-  overflow: visible;
-  margin: 0 auto;
-  user-select: none;
-  box-sizing: border-box;
-  touch-action: pan-x;
-}
-
-.image-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: none;
-  max-width: 240px;
-}
-
-.image-container img.visible {
-  display: block;
-}
-
-.nav-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  width: 2.5em;
-  height: 2.5em;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #333;
-  transition: color 0.3s ease;
-  z-index: 10;
-  pointer-events: auto;
+  align-items: center;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-.nav-arrow:hover,
-.nav-arrow:focus {
-  color: #000;
-  outline: none;
+.text-container {
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+  font-size: 1rem;
 }
-
-.nav-arrow.left {
-  left: -3em;
-}
-
-.nav-arrow.right {
-  right: -3em;
-}
-
-.description-container {
-  margin-top: 0.5em;
-  font-family: Arial, sans-serif;
-  font-size: small;
-  color: #333;
-  text-align: center;
-}
-
-.description-container a {
-  color: #0066cc;
-  text-decoration: none;
-}
-
-.description-container a:hover {
-  text-decoration: underline;
-}
-
-.page-header {
-  width: 100%;
-  max-width: 240px;
-  margin: 2em auto 6em auto;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  font-size: small;
-  color: #c0c0c0;
-}
-
-@media (max-width: 800px) {
-  .image-text-wrapper {
-    max-width: 240px !important;
-    margin: 0 auto 4em auto !important;
-    padding: 0 !important;
+@media (max-width: 768px) and (orientation: portrait) {
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
   }
-
-  .image-container {
-    max-width: 240px !important;
-    padding-top: calc(240px * 0.83) !important;
-  }
-
-  .image-container img {
-    max-width: 240px !important;
-    height: calc(240px * 0.83) !important;
-  }
-
-  .nav-arrow.left {
-    left: -3em !important;
-  }
-  
-  .nav-arrow.right {
-    right: -3em !important;
-  }
-
-  .page-header {
-    margin: 2em auto 6em auto !important;
+  body {
+    overflow: hidden;
   }
 }
