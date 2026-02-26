@@ -65,11 +65,13 @@ footer {
   color: #666;
   letter-spacing: 0.01em;
   line-height: 1.5;
+  cursor: default;
 }
 
 footer a {
   color: #666;
   text-decoration: none;
+  cursor: pointer;
 }
 
 footer a:hover {
