@@ -21,7 +21,7 @@ const experiments = [
   },
   {
     type: 'video',
-    src: 'https://michaelseh.com/videos/Function-doubt.mp4',
+    src: 'https://michaelseh.com/videos/Functional-doubt.mp4',
     caption: 'Function Doubt. <span class="muted">A watch face where shapes tell the time, but only if you know how to look.</span>'
   }
 ];
