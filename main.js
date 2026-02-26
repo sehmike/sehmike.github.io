@@ -18,6 +18,11 @@ const experiments = [
     type: 'video',
     src: 'https://michaelseh.com/videos/Translation-scrub.mp4',
     caption: 'Translation scrub. <span class="muted">Drag across any text and it translates word by word as your finger passes over it. One language behind your finger, another ahead.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Function-doubt.mp4',
+    caption: 'Function Doubt. <span class="muted">A watch face where shapes tell the time, but only if you know how to look.</span>'
   }
 ];
 const placeholder = {
