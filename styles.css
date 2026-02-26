@@ -56,7 +56,7 @@ main {
 footer {
   clear: both;
   border-top: 1px solid #ddd;
-  padding: 20px;
+  padding: 30px 20px 20px;
   margin-top: auto;
   display: flex;
   justify-content: space-between;
@@ -102,5 +102,8 @@ footer a:hover {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+  }
+  .footer-left svg {
+    margin-bottom: 4px;
   }
 }
