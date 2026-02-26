@@ -13,6 +13,11 @@ const experiments = [
     type: 'video',
     src: 'https://michaelseh.com/videos/Artwork-dimension-measure.mp4',
     caption: 'Artwork dimension measure. <span class="muted">Listed dimensions describe the whole. Drag to measure the parts. Isolate any section to see its estimated real-world size, scaled from the known artwork dimensions.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Translation-scrub.mp4',
+    caption: 'Translation scrub. <span class="muted">Drag across any text and it translates word by word as your finger passes over it. One language behind your finger, another ahead.</span>'
   }
 ];
 const placeholder = {
