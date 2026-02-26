@@ -5,6 +5,11 @@ const items = [
     caption: 'Temperature gradient list. <span class="muted">Tap a day in the 7-day forecast and the entire screen shifts color to match the temperature. Warm days glow amber, cold days go deep blue.</span>'
   },
   {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Emoji-motion-cues.mp4',
+    caption: 'Emoji motion cues. <span class="muted">Vehicle Motion Cues is a feature that displays small dots along your screen edges while riding in a car. The dots shift with vehicle movement, giving your eyes a reference point to reduce motion sickness. This experiment swaps the dots for emoji as a hidden Easter egg. Steering wheels, traffic lights, pedestrians reacting to every turn and brake.</span>'
+  },
+  {
     type: 'placeholder',
     caption: 'Next experiment. <span class="muted">In progress.</span>'
   }
