@@ -1,1 +1,89 @@
-body,html{margin:0;padding:0;height:100%;background-color:#000;color:#fff;font-family:Arial, sans-serif;font-weight:700;font-size:1rem;display:flex;justify-content:center;align-items:center;overflow:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;touch-action:none;-ms-touch-action:none;-webkit-text-size-adjust:100%;pointer-events:none}.text-container{letter-spacing:0.15em;white-space:nowrap;text-transform:uppercase;transform:rotate(0deg);transition:transform 0.3s ease;font-size:1rem;pointer-events:auto}@media (max-width: 768px) and (orientation: portrait){.text-container{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%) rotate(90deg)}body{overflow:hidden}}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #fff;
+  color: #000;
+  font: bold 16px arial;
+  cursor: pointer;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img::selection, video::selection { background: none; }
+
+main {
+  position: relative;
+  float: left;
+  flex: 1;
+}
+
+.piece {
+  position: relative;
+  float: left;
+  clear: none;
+  margin: 7px 0 0 7px;
+}
+
+.piece video {
+  position: relative;
+  float: left;
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: 1px;
+}
+
+.piece .placeholder {
+  position: relative;
+  float: left;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f5f5f5;
+  margin-bottom: 1px;
+}
+
+.piece figcaption {
+  position: relative;
+  float: left;
+  clear: both;
+  font: bold 14px arial;
+}
+
+.piece figcaption .muted {
+  color: #999;
+}
+
+footer {
+  clear: both;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font: normal 13px arial;
+  color: #666;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  body { font: bold 12px arial; }
+  .piece figcaption { font: bold 11px arial; }
+  .piece { min-width: 45%; }
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 11px;
+    padding: 16px;
+  }
+}
