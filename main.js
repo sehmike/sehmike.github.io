@@ -29,23 +29,22 @@ function addPiece() {
     video.muted = true;
     video.playsInline = true;
     video.preload = 'none';
-    video.dataset.lazy = '';
-    const source = document.createElement('source');
-    source.src = item.src;
-    source.type = 'video/mp4';
-    video.appendChild(source);
     fig.appendChild(video);
 
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          if (video.dataset.lazy !== undefined && video.readyState === 0) {
+          if (!video.src || video.readyState === 0) {
+            video.src = item.src;
             video.load();
-            delete video.dataset.lazy;
           }
           video.play().catch(() => {});
         } else {
           video.pause();
+          if (video.readyState > 0) {
+            video.removeAttribute('src');
+            video.load();
+          }
         }
       });
     }, { threshold: 0.2 });
