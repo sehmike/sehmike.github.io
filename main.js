@@ -23,6 +23,11 @@ const experiments = [
     type: 'video',
     src: 'https://michaelseh.com/videos/Functional-doubt.mp4',
     caption: 'Functional Doubt. <span class="muted">A watch face where shapes tell the time, but only if you know how to look.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Gaze-depth.mp4',
+    caption: 'Gaze depth. <span class="muted">The paragraph you\'re reading is sharp. The rest blur more the further they are from your focus.</span>'
   }
 ];
 const placeholder = {
