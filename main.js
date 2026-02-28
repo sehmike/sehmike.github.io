@@ -37,7 +37,7 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Delete-by-weight.mp4',
-    caption: 'Delete by weight. <span class="muted">Drag a file to trash and the larger the file, the harder it is to move. A 4KB text file flicks away instantly. A 4GB video drags like pushing a boulder. You feel what you\'re deleting.</span>'
+    caption: 'Delete by weight. <span class="muted">Drag a file to trash and the larger the file, the harder it is to move. A 4KB text file flicks away instantly. A 4GB video drags like a boulder. You feel what you\'re deleting.</span>'
   }
 ];
 const placeholder = {
