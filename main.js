@@ -28,6 +28,11 @@ const experiments = [
     type: 'video',
     src: 'https://michaelseh.com/videos/Gaze-depth.mp4',
     caption: 'Gaze depth. <span class="muted">The paragraph you\'re reading is sharp. The rest blur more the further they are from your focus.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Aftertouch.mp4',
+    caption: 'Aftertouch. <span class="muted">Camera Control already ships with a capacitive surface that reads force, swipe, and tap. Today those inputs serve the moment before capture. Aftertouch explores what they could do after, extending an interaction language already built into the hardware.</span>'
   }
 ];
 const placeholder = {
