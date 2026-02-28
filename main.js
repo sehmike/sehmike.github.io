@@ -38,6 +38,11 @@ const experiments = [
     type: 'video',
     src: 'https://michaelseh.com/videos/Delete-by-weight.mp4',
     caption: 'Delete by weight. <span class="muted">Drag a file to trash and the larger the file, the harder it is to move. A 4KB text file flicks away instantly. A 4GB video drags like a boulder. You feel what you\'re deleting.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Split-screen-by-angle.mp4',
+    caption: 'Split screen by angle. <span class="muted">Tilt the iPad and the app you tilt toward grows. Center it, even split.</span>'
   }
 ];
 const placeholder = {
