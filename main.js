@@ -46,6 +46,19 @@ for (let j = experiments.length - 1; j > 0; j--) {
 const items = [...experiments, placeholder];
 let i = 0;
 const mosaic = document.getElementById('mosaic');
+
+// Prompt — "Tap" on touch, "Click" on desktop
+const prompt = document.getElementById('prompt');
+const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+prompt.textContent = (isTouch ? 'Tap' : 'Click') + ' to reveal experiments';
+
+function dismissPrompt() {
+  if (prompt && !prompt.classList.contains('hidden')) {
+    prompt.classList.add('hidden');
+    setTimeout(() => prompt.remove(), 400);
+  }
+}
+
 function addPiece() {
   if (i >= items.length) return;
   const item = items[i];
@@ -92,6 +105,7 @@ function addPiece() {
 addPiece();
 document.body.addEventListener('click', function(e) {
   if (e.target.closest('footer')) return;
+  dismissPrompt();
   addPiece();
 });
 document.addEventListener('dragstart', function(e) {

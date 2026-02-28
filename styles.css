@@ -18,6 +18,23 @@ main {
   flex: 1;
 }
 
+#prompt {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font: normal 13px arial;
+  color: #999;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.4s ease;
+}
+
+#prompt.hidden {
+  opacity: 0;
+}
+
 .piece {
   position: relative;
   float: left;
@@ -92,6 +109,7 @@ footer a:hover {
   body { font: bold 12px arial; }
   .piece figcaption { font: bold 11px arial; }
   .piece { min-width: 45%; }
+  #prompt { font-size: 11px; top: 38%; }
   footer {
     flex-direction: column;
     gap: 12px;
