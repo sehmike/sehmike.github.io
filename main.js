@@ -37,7 +37,8 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Delete-by-weight.mp4',
-    caption: 'Delete by weight. <span class="muted">Drag a file to trash and the heavier the file, the harder it is to move. A 4KB text file flicks away instantly. A 4GB video drags like pushing a boulder. You feel what you\'re deleting.</span>'
+    caption: 'Delete by weight. <span class="muted">Drag a file to trash and the heavier the file, the harder it is to move. A 4KB text file flicks away instantly. A 4GB video drags like pushing a boulder. You feel what you\'re deleting.</span>',
+    square: true
   },
   {
     type: 'video',
@@ -47,8 +48,7 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Mood-swing.mp4',
-    caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>',
-    square: true
+    caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>'
   }
 ];
 
