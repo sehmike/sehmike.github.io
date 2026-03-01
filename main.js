@@ -46,8 +46,8 @@ const experiments = [
   },
   {
     type: 'video',
-    src: 'https://michaelseh.com/videos/Mood.mp4',
-    caption: 'Mood. <span class="muted">The screen feels how far you open it.</span>'
+    src: 'https://michaelseh.com/videos/Mood-swing.mp4',
+    caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>'
   }
 ];
 const placeholder = {
