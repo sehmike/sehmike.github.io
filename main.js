@@ -50,14 +50,17 @@ const experiments = [
     caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>'
   }
 ];
+
 const placeholder = {
   type: 'placeholder',
   caption: 'Next experiment. <span class="muted">In progress.</span>'
 };
+
 for (let j = experiments.length - 1; j > 0; j--) {
   const k = Math.floor(Math.random() * (j + 1));
   [experiments[j], experiments[k]] = [experiments[k], experiments[j]];
 }
+
 const items = [...experiments, placeholder];
 let i = 0;
 const mosaic = document.getElementById('mosaic');
@@ -117,12 +120,15 @@ function addPiece() {
   mosaic.prepend(fig);
   i++;
 }
+
 addPiece();
+
 document.body.addEventListener('click', function(e) {
   if (e.target.closest('footer')) return;
   dismissPrompt();
   addPiece();
 });
+
 document.addEventListener('dragstart', function(e) {
   if (e.target.tagName === 'VIDEO') e.preventDefault();
 });

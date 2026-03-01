@@ -13,8 +13,9 @@ body {
 img::selection, video::selection { background: none; }
 
 main {
-  position: relative;
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
   flex: 1;
 }
 
@@ -36,23 +37,17 @@ main {
 }
 
 .piece {
-  position: relative;
-  float: left;
-  clear: none;
   margin: 7px 0 0 7px;
 }
 
 .piece video {
-  position: relative;
-  float: left;
+  display: block;
   width: 100%;
   cursor: pointer;
   margin-bottom: 1px;
 }
 
 .piece .placeholder {
-  position: relative;
-  float: left;
   width: 100%;
   aspect-ratio: 16 / 9;
   background: #f5f5f5;
@@ -60,9 +55,6 @@ main {
 }
 
 .piece figcaption {
-  position: relative;
-  float: left;
-  clear: both;
   font: bold 14px arial;
 }
 
@@ -71,7 +63,6 @@ main {
 }
 
 footer {
-  clear: both;
   border-top: 1px solid #ddd;
   padding: 30px 20px 20px;
   margin-top: auto;
