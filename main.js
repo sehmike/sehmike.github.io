@@ -53,7 +53,7 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Shared-fidget.mp4',
-    caption: 'Shared fidget. <span class="muted">A bubble wrap widget that stays in sync between two phones. Pop one on yours, watch it pop on theirs.</span>',
+    caption: 'Shared fidget. <span class="muted">A bubble wrap widget that stays in sync between two phones. Pop one on yours, it pops on theirs.</span>',
     square: true
   }
 ];
