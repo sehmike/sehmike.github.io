@@ -97,7 +97,7 @@ function addPiece() {
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          if (!video.src) {
+          if (!video.hasAttribute('src')) {
             video.src = item.src;
             video.load();
           }
