@@ -47,7 +47,8 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Mood-swing.mp4',
-    caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>'
+    caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>',
+    square: true
   }
 ];
 
@@ -65,7 +66,6 @@ const items = [...experiments, placeholder];
 let i = 0;
 const mosaic = document.getElementById('mosaic');
 
-// Prompt — "Tap" on touch, "Click" on desktop
 const prompt = document.getElementById('prompt');
 const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 prompt.textContent = (isTouch ? 'Tap' : 'Click') + ' to reveal experiments';
@@ -90,21 +90,20 @@ function addPiece() {
     video.muted = true;
     video.playsInline = true;
     video.preload = 'none';
+    if (item.square) {
+      video.style.aspectRatio = '1 / 1';
+    }
     fig.appendChild(video);
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          if (!video.src || video.readyState === 0) {
+          if (!video.src) {
             video.src = item.src;
             video.load();
           }
           video.play().catch(() => {});
         } else {
           video.pause();
-          if (video.readyState > 0) {
-            video.removeAttribute('src');
-            video.load();
-          }
         }
       });
     }, { threshold: 0.2 });

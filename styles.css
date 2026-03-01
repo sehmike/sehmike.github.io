@@ -17,6 +17,7 @@ main {
   flex-wrap: wrap;
   align-content: flex-start;
   flex: 1;
+  padding-bottom: 7px;
 }
 
 #prompt {
@@ -43,6 +44,7 @@ main {
 .piece video {
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 9;
   cursor: pointer;
   margin-bottom: 1px;
 }
