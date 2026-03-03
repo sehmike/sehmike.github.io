@@ -59,7 +59,7 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Stale-tabs.mp4',
-    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look crisp. The longer you don\'t visit a tab, the more old it looks.</span>'
+    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look crisp. The longer you don\'t visit a tab, the older it looks.</span>'
   }
 ];
 
