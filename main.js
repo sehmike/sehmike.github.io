@@ -53,8 +53,13 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Shared-fidget.mp4',
-    caption: 'Shared fidget. <span class="muted">A bubble wrap widget that stays in sync between two phones. Pop one on yours, it pops on theirs.</span>',
+    caption: 'Shared fidget. <span class="muted">A bubble wrap widget that stays in sync between two phones. Pop one on yours, watch it pop on theirs.</span>',
     square: true
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Stale-tabs.mp4',
+    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look sharp. The longer you ignore one, the more it fades. Colors wash out, edges soften, the favicon dims. You open your browser and instantly know what\'s been sitting there for days.</span>'
   }
 ];
 
