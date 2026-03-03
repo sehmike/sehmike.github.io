@@ -59,7 +59,7 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Stale-tabs.mp4',
-    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look crisp. The longer you ignore one, the more it fades. Colors wash out, edges soften, the site icon dims. You open your browser and instantly know what\'s been sitting there for days.</span>'
+    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look crisp. The longer you ignore one, the more it fades. Colors wash out, edges soften, the site icon dims. You know what\'s been sitting there for days.</span>'
   }
 ];
 
