@@ -7,6 +7,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 img::selection, video::selection { background: none; }
