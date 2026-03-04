@@ -4,7 +4,6 @@ body {
   background: #fff;
   color: #000;
   font: bold 16px arial;
-  cursor: pointer;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,10 +17,12 @@ main {
   align-content: flex-start;
   flex: 1;
   padding-bottom: 7px;
+  position: relative;
+  cursor: pointer;
 }
 
 #prompt {
-  position: fixed;
+  position: absolute;
   top: 40%;
   left: 0;
   right: 0;
@@ -65,6 +66,38 @@ main {
   color: #999;
 }
 
+.project-card {
+  padding: 30px 20px 20px;
+  font: bold 14px arial;
+  border-top: 1px solid #ddd;
+  cursor: default;
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 7px;
+}
+
+.project-card figcaption {
+  font: bold 14px arial;
+}
+
+.project-card .muted {
+  color: #999;
+}
+
+.project-card a {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.project-card a:hover {
+  color: #000;
+}
+
 footer {
   border-top: 1px solid #ddd;
   padding: 30px 20px 20px;
@@ -104,6 +137,8 @@ footer a:hover {
   .piece figcaption { font: bold 11px arial; }
   .piece { min-width: 45%; }
   #prompt { font-size: 12px; top: 38%; }
+  .project-card { font: bold 11px arial; padding: 16px; }
+  .project-card figcaption { font: bold 11px arial; }
   footer {
     flex-direction: column;
     gap: 12px;

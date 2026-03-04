@@ -59,7 +59,7 @@ const experiments = [
   {
     type: 'video',
     src: 'https://michaelseh.com/videos/Stale-tabs.mp4',
-    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look crisp. The longer you don\'t visit a tab, the older it looks.</span>'
+    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look sharp. The longer you ignore one, the more it fades. Colors wash out, edges soften, the favicon dims. You open your browser and instantly know what\'s been sitting there for days.</span>'
   }
 ];
 
@@ -133,10 +133,15 @@ function addPiece() {
 
 addPiece();
 
-document.body.addEventListener('click', function(e) {
-  if (e.target.closest('footer')) return;
+mosaic.addEventListener('click', function(e) {
   dismissPrompt();
   addPiece();
+});
+
+document.addEventListener('click', function(e) {
+  if (!mosaic.contains(e.target) && e.target !== prompt) {
+    dismissPrompt();
+  }
 });
 
 document.addEventListener('dragstart', function(e) {
