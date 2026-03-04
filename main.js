@@ -1,0 +1,149 @@
+const experiments = [
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Temperature-gradient-list.mp4',
+    caption: 'Temperature gradient list. <span class="muted">Tap a day in the 7-day forecast and the entire screen shifts color to match the temperature. Warm days glow amber, cold days go deep blue.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Emoji-motion-cues.mp4',
+    caption: 'Emoji motion cues. <span class="muted">Vehicle motion cues is a feature that displays small dots along your screen edges while riding in a car. The dots shift with vehicle movement, giving your eyes a reference point to reduce motion sickness. This experiment swaps the dots for emoji as a hidden Easter egg. Steering wheels, traffic lights, pedestrians reacting to every turn and brake.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Artwork-dimension-measure.mp4',
+    caption: 'Artwork dimension measure. <span class="muted">Listed dimensions describe the whole. Drag to measure the parts. Isolate any section to see its estimated real-world size, scaled from the known artwork dimensions.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Translation-scrub.mp4',
+    caption: 'Translation scrub. <span class="muted">Drag across any text and it translates word by word as your finger passes over it. One language behind your finger, another ahead.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Functional-doubt.mp4',
+    caption: 'Functional Doubt. <span class="muted">A watch face where shapes tell the time, but only if you know how to look.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Gaze-depth.mp4',
+    caption: 'Gaze depth. <span class="muted">The paragraph you\'re reading is sharp. The rest blur more the further they are from your focus.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Aftertouch.mp4',
+    caption: 'Aftertouch. <span class="muted">Camera Control already ships with a capacitive surface that reads force, swipe, and tap. Today those inputs serve the moment before capture. Aftertouch explores what they could do after, extending an interaction language already built into the hardware.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Delete-by-weight.mp4',
+    caption: 'Delete by weight. <span class="muted">Drag a file to trash and the heavier the file, the harder it is to move. A 4KB text file flicks away instantly. A 4GB video drags like pushing a boulder. You feel what you\'re deleting.</span>',
+    square: true
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Split-screen-by-angle.mp4',
+    caption: 'Split screen by angle. <span class="muted">Tilt the iPad and the app you tilt toward grows. Center it, even split.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Mood-swing.mp4',
+    caption: 'Mood Swing. <span class="muted">The farther you open it, the happier it gets.</span>'
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Shared-fidget.mp4',
+    caption: 'Shared fidget. <span class="muted">A bubble wrap widget that stays in sync between two phones. Pop one on yours, watch it pop on theirs.</span>',
+    square: true
+  },
+  {
+    type: 'video',
+    src: 'https://michaelseh.com/videos/Stale-tabs.mp4',
+    caption: 'Stale tabs. <span class="muted">Forgotten tabs go stale. Fresh ones look sharp. The longer you ignore one, the more it fades. Colors wash out, edges soften, the favicon dims. You open your browser and instantly know what\'s been sitting there for days.</span>'
+  }
+];
+
+const placeholder = {
+  type: 'placeholder',
+  caption: 'Next experiment. <span class="muted">In progress.</span>'
+};
+
+for (let j = experiments.length - 1; j > 0; j--) {
+  const k = Math.floor(Math.random() * (j + 1));
+  [experiments[j], experiments[k]] = [experiments[k], experiments[j]];
+}
+
+const items = [...experiments, placeholder];
+let i = 0;
+const mosaic = document.getElementById('mosaic');
+
+const prompt = document.getElementById('prompt');
+const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+prompt.textContent = (isTouch ? 'Tap' : 'Click') + ' to reveal experiments';
+
+function dismissPrompt() {
+  if (prompt && !prompt.classList.contains('hidden')) {
+    prompt.classList.add('hidden');
+    setTimeout(() => prompt.remove(), 400);
+  }
+}
+
+function addPiece() {
+  if (i >= items.length) return;
+  const item = items[i];
+  const w = Math.floor(Math.random() * 25 + 25);
+  const fig = document.createElement('figure');
+  fig.className = 'piece';
+  fig.style.maxWidth = w + '%';
+  if (item.type === 'video') {
+    const video = document.createElement('video');
+    video.loop = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.preload = 'none';
+    if (item.square) {
+      video.style.aspectRatio = '1 / 1';
+    }
+    fig.appendChild(video);
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          if (!video.hasAttribute('src')) {
+            video.src = item.src;
+            video.load();
+          }
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.2 });
+    obs.observe(video);
+  } else {
+    const ph = document.createElement('div');
+    ph.className = 'placeholder';
+    fig.appendChild(ph);
+  }
+  const cap = document.createElement('figcaption');
+  cap.innerHTML = item.caption;
+  fig.appendChild(cap);
+  mosaic.prepend(fig);
+  i++;
+}
+
+addPiece();
+
+mosaic.addEventListener('click', function(e) {
+  dismissPrompt();
+  addPiece();
+});
+
+document.addEventListener('click', function(e) {
+  if (!mosaic.contains(e.target) && e.target !== prompt) {
+    dismissPrompt();
+  }
+});
+
+document.addEventListener('dragstart', function(e) {
+  if (e.target.tagName === 'VIDEO') e.preventDefault();
+});
