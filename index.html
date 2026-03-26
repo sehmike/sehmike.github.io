@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Michael Seh — Design & Development</title>
+  <meta name="description" content="Michael Seh — interaction design, type design, and development.">
+  <meta name="author" content="Michael Seh">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://michaelseh.com">
+  <meta property="og:title" content="Michael Seh — Design & Development">
+  <meta property="og:description" content="Interaction design, type design, and development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michaelseh.com">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Michael Seh — Design & Development">
+  <meta name="twitter:description" content="Interaction design, type design, and development.">
+  <link rel="icon" href="data:,">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: #000;
+      color: #fff;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f8f8f8;
+      color: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      cursor: crosshair;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .carousel {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      opacity: 1;
+    }
+
+    .carousel-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 0;
+      transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+      will-change: transform;
+    }
+
+    .slide {
+      flex-shrink: 0;
+      width: 100vw;
+      height: calc(100vh - 38px);
+      display: grid;
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-items: center;
+      background: #f8f8f8;
+      overflow: hidden;
+      padding-bottom: 12vh;
+    }
+
+    .slide video {
+      max-height: 100%;
+      max-width: 90vw;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .slide.slide-fidget video {
+      transform: translateY(0vh) scale(0.88);
+      transform-origin: center center;
+      max-height: calc(100vh - 38px - 120px);
+      max-width: 85vw;
+    }
+
+    .slide-text {
+      display: none;
+    }
+
+    .slide-label {
+      position: fixed;
+      bottom: 78px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding: 0 12px;
+      z-index: 9999;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+
+    .slide-label a {
+      color: inherit;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    .slide-label a:hover {
+      opacity: 0.4;
+    }
+
+    .slide-title {
+      display: inline;
+      letter-spacing: 0.05em;
+      font-size: 13px;
+    }
+
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 12px;
+      z-index: 1000;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      border-top: 1.5px solid #000;
+      background: #f8f8f8;
+    }
+
+    .bottom-nav a, .bottom-nav [role="button"] {
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .bottom-nav a:hover, .bottom-nav [role="button"]:hover {
+      opacity: 0.4;
+    }
+
+    .nav-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: default;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 12px;
+    }
+
+    .index-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 38px;
+      background: #f8f8f8;
+      z-index: 900;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+      overflow-y: auto;
+      border-top: 1.5px solid #000;
+      scrollbar-width: none;
+    }
+
+    .index-panel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .index-panel.open {
+      transform: translateY(0);
+    }
+
+    .scroll-hint {
+      display: block;
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #bbb;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+
+    .scroll-hint.gone { opacity: 0; }
+
+    .index-item {
+      border-bottom: 1.5px solid #000;
+      padding: 10px 12px;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.1s;
+    }
+
+    .index-item:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .index-item .idx-year {
+      color: #999;
+      font-size: 11px;
+    }
+
+    .index-item:hover .idx-year {
+      color: #666;
+    }
+
+    #follower {
+      position: fixed;
+      pointer-events: none;
+      z-index: 2000;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+      transform: translate(18px, 18px);
+      transition: opacity 0.15s;
+      opacity: 0;
+    }
+
+    #follower.show {
+      opacity: 1;
+    }
+
+    .descriptor {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 10px 12px;
+      font-size: 9px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #bbb;
+      z-index: 100;
+    }
+
+    .arrow {
+      position: fixed;
+      top: 0;
+      bottom: 38px;
+      width: 15%;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.15s;
+      background: none;
+      border: none;
+      font-family: inherit;
+      color: inherit;
+    }
+
+    .arrow:hover, .arrow:focus-visible { opacity: 1; }
+
+    .arrow-left {
+      left: 0;
+      justify-content: flex-start;
+      padding-left: 12px;
+      cursor: w-resize;
+    }
+
+    .arrow-right {
+      right: 0;
+      justify-content: flex-end;
+      padding-right: 12px;
+      cursor: e-resize;
+    }
+
+    .arrow span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #999;
+    }
+
+    .counter {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 10px 12px;
+      font-size: 9px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #bbb;
+      z-index: 100;
+    }
+
+    .slide-link {
+      text-decoration: none;
+      border-bottom: 1px solid #000;
+      padding-bottom: 1px;
+      transition: opacity 0.15s;
+    }
+
+    .slide-link:hover {
+      opacity: 0.4;
+    }
+
+    .slide-embed {
+      position: relative;
+    }
+
+    .slide-embed iframe {
+      border: none;
+      pointer-events: none;
+      filter: blur(0.4px) contrast(0.97) saturate(0.95);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      width: var(--embed-w);
+      height: var(--embed-h);
+      position: absolute;
+      top: 42%;
+      left: 50%;
+      transform-origin: center center;
+      transform: translate(-50%, -50%) scale(var(--embed-scale));
+      transition: transform 0.3s ease;
+    }
+
+    .swipe-hint {
+      display: none;
+    }
+
+    @media (pointer: coarse) {
+      .arrow { display: none; }
+      .swipe-hint {
+        display: block;
+        position: fixed;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        font-size: 9px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #bbb;
+        z-index: 100;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      .swipe-hint.gone { opacity: 0; pointer-events: none; }
+    }
+
+    @media (max-width: 768px) {
+      .bottom-nav {
+        font-size: 10px;
+        padding: 0 8px;
+      }
+      .nav-center { display: none; }
+      .nav-right { margin-left: auto; }
+      .index-item { font-size: 12px; }
+    }
+
+    @media (orientation: landscape) {
+      .slide video {
+        max-width: 55vw;
+      }
+    }
+
+    @media (orientation: landscape) and (max-height: 500px) {
+      .slide {
+        height: calc(100vh - 32px);
+      }
+      .slide video {
+        max-height: calc(100vh - 32px - 30px);
+        max-width: 45vw;
+      }
+      .slide.slide-fidget video {
+        transform: translateY(-1vh);
+        max-height: calc(100vh - 32px - 80px);
+      }
+      .slide-label { font-size: 10px; bottom: 72px; }
+      .bottom-nav { height: 32px; }
+      .index-panel { bottom: 32px; }
+      .arrow { bottom: 32px; }
+    }
+
+    @media (max-width: 480px) {
+      .nav-right { gap: 8px; }
+      .counter, .descriptor { font-size: 8px; }
+      .slide-title { font-size: 11px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .carousel-track { transition: none; }
+      .index-panel { transition: none; }
+      * { transition-duration: 0s !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="follower"></div>
+  <div class="counter" id="counter"></div>
+  <div class="descriptor">Interaction Design, Type & Development</div>
+
+  <div class="swipe-hint" id="swipe-hint">Swipe &rarr;</div>
+  <div class="slide-label" id="slide-label"></div>
+
+  <div class="carousel" id="carousel" role="region" aria-label="Project carousel">
+    <div class="carousel-track" id="track">
+
+      <div class="slide" data-title="Split Screen by Angle">
+        <video data-src="videos/Split-screen-by-angle.mp4" poster="posters/Split-screen-by-angle-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Split Screen by Angle</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Aftertouch">
+        <video data-src="videos/Aftertouch.mp4" poster="posters/Aftertouch-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Aftertouch</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Gaze Depth">
+        <video data-src="videos/Gaze-depth.mp4" poster="posters/Gaze-depth-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Gaze Depth</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Emoji Motion Cues">
+        <video data-src="videos/Emoji-motion-cues.mp4" poster="posters/Emoji-motion-cues-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Emoji Motion Cues</span>
+        </div>
+      </div>
+
+      <div class="slide slide-fidget" data-title="Shared Fidget">
+        <video data-src="videos/Shared-fidget.mp4" poster="posters/Shared-fidget-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Shared Fidget</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Artwork Dimension Measure">
+        <video data-src="videos/Artwork-dimension-measure.mp4" poster="posters/Artwork-dimension-measure-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Artwork Dimension Measure</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Mood Swing">
+        <video data-src="videos/Mood-swing.mp4" poster="posters/Mood-swing-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Mood Swing</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Translation Scrub">
+        <video data-src="videos/Translation-scrub.mp4" poster="posters/Translation-scrub-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Translation Scrub</span>
+        </div>
+      </div>
+
+      <div class="slide" data-title="The Block Is Hot" data-href="https://theblock.is/hot/">
+        <video data-src="videos/The-block-is-hot-clipped.mp4" poster="posters/The-block-is-hot-clipped-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <a class="slide-title slide-link" href="https://theblock.is/hot/" target="_blank" rel="noopener">The Block Is Hot &#x2197;&#xFE0E;</a>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Stale Tabs">
+        <video data-src="videos/Stale-tabs.mp4" poster="posters/Stale-tabs-poster.jpg" autoplay loop muted playsinline preload="none"></video>
+        <div class="slide-text">
+          <span class="slide-title">Stale Tabs</span>
+        </div>
+      </div>
+
+      <div class="slide slide-embed" data-title="Michael's Fonts" data-href="https://michaelsfonts.com">
+        <iframe data-src="https://michaelsfonts.com" loading="lazy"></iframe>
+        <div class="slide-text">
+          <a class="slide-title slide-link" href="https://michaelsfonts.com" target="_blank" rel="noopener">Michael's Fonts &#x2197;&#xFE0E;</a>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="arrow arrow-left" id="arrow-left" aria-label="Previous project"><span>&larr;</span></button>
+    <button class="arrow arrow-right" id="arrow-right" aria-label="Next project"><span>&rarr;</span></button>
+  </div>
+
+  <div class="index-panel" id="index-panel" role="navigation" aria-label="Project index">
+    <div class="scroll-hint" id="scroll-hint">Scroll &darr;</div>
+  </div>
+
+  <nav class="bottom-nav">
+    <span id="nav-index" role="button" tabindex="0" aria-label="Toggle project index">Index</span>
+    <span class="nav-center">Michael Seh</span>
+    <div class="nav-right">
+      <a href="mailto:mail@michaelseh.com">Mail</a>
+      <a href="https://www.linkedin.com/in/michael-seh" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/michaelseh" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </nav>
+
+  <script>
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+    (function shuffleSlides() {
+      var track = document.getElementById('track');
+      var all = Array.from(track.querySelectorAll('.slide'));
+      var blockIsHot = all.find(function(s) { return s.dataset.title === 'The Block Is Hot'; });
+      var fonts = all.find(function(s) { return s.dataset.title === "Michael's Fonts"; });
+      var rest = all.filter(function(s) { return s !== blockIsHot && s !== fonts; });
+
+      for (var i = rest.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = rest[i];
+        rest[i] = rest[j];
+        rest[j] = temp;
+      }
+
+      track.innerHTML = '';
+      rest.forEach(function(s) { track.appendChild(s); });
+      if (blockIsHot) track.appendChild(blockIsHot);
+      if (fonts) track.appendChild(fonts);
+    })();
+
+    var current = 0;
+    var slides = document.querySelectorAll('.slide');
+    var track = document.getElementById('track');
+    var total = slides.length;
+    var indexOpen = false;
+    var slideLabel = document.getElementById('slide-label');
+
+    goTo(0);
+
+    function goTo(idx) {
+      current = Math.max(0, Math.min(total - 1, idx));
+      track.style.transform = 'translateX(-' + current * 100 + 'vw)';
+      updateCounter();
+      loadNearby(current);
+
+      var cur = slides[current];
+      var href = cur.dataset.href;
+      var title = cur.dataset.title;
+      if (href) {
+        slideLabel.innerHTML = '<a href="' + href + '" target="_blank" rel="noopener">' + title + ' &#x2197;&#xFE0E;</a>';
+      } else {
+        slideLabel.textContent = title;
+      }
+
+      slides.forEach(function(s, i) {
+        var v = s.querySelector('video');
+        if (!v) return;
+        if (i === current) { v.currentTime = 0; v.play().catch(function() {}); }
+        else { v.pause(); }
+      });
+
+      if (follower && follower.classList.contains('show')) {
+        follower.textContent = href || title;
+      }
+    }
+
+    function loadNearby(idx) {
+      for (var i = Math.max(0, idx - 1); i <= Math.min(total - 1, idx + 1); i++) {
+        var v = slides[i].querySelector('video');
+        if (v && v.dataset.src && !v.getAttribute('src')) {
+          v.src = v.dataset.src;
+          v.preload = 'auto';
+          v.load();
+        }
+        var f = slides[i].querySelector('iframe');
+        if (f && f.dataset.src && !f.getAttribute('src')) {
+          f.src = f.dataset.src;
+        }
+      }
+    }
+
+    function updateCounter() {
+      document.getElementById('counter').textContent =
+        String(current + 1).padStart(2, '0') + ' / ' + String(total).padStart(2, '0');
+    }
+    updateCounter();
+
+    document.getElementById('arrow-left').addEventListener('click', function() { goTo(current - 1); });
+    document.getElementById('arrow-right').addEventListener('click', function() { goTo(current + 1); });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goTo(current + 1);
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goTo(current - 1);
+      if (e.key === 'Escape' && indexOpen) toggleIndex();
+    });
+
+    var touchStartX = 0;
+    var swipeHint = document.getElementById('swipe-hint');
+    document.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', function(e) {
+      var diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? goTo(current + 1) : goTo(current - 1);
+        if (swipeHint) { swipeHint.classList.add('gone'); }
+      }
+    }, { passive: true });
+
+    var indexPanel = document.getElementById('index-panel');
+    var scrollHintEl = document.getElementById('scroll-hint');
+
+    slides.forEach(function(s, i) {
+      var title = s.dataset.title;
+      var hasLink = s.dataset.href;
+      var item = document.createElement('div');
+      item.className = 'index-item';
+      item.setAttribute('role', 'button');
+      item.setAttribute('tabindex', '0');
+      item.innerHTML = hasLink
+        ? '<span>' + title + ' &#x2197;&#xFE0E;</span><span class="idx-year">ONGOING</span>'
+        : '<span>' + title + '</span>';
+      item.addEventListener('click', function() {
+        goTo(i);
+        toggleIndex();
+      });
+      item.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          goTo(i);
+          toggleIndex();
+        }
+      });
+      indexPanel.appendChild(item);
+    });
+
+    function toggleIndex() {
+      indexOpen = !indexOpen;
+      indexPanel.classList.toggle('open', indexOpen);
+      document.getElementById('nav-index').textContent = indexOpen ? 'Close' : 'Index';
+      slideLabel.style.display = indexOpen ? 'none' : '';
+      if (indexOpen && scrollHintEl) {
+        scrollHintEl.classList.remove('gone');
+        requestAnimationFrame(function() {
+          if (indexPanel.scrollHeight <= indexPanel.clientHeight) {
+            scrollHintEl.classList.add('gone');
+          }
+        });
+      }
+    }
+
+    document.getElementById('nav-index').addEventListener('click', toggleIndex);
+    document.getElementById('nav-index').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleIndex(); }
+    });
+
+    indexPanel.addEventListener('scroll', function() {
+      if (scrollHintEl && indexPanel.scrollTop > 10) {
+        scrollHintEl.classList.add('gone');
+      }
+    }, { passive: true });
+
+    var follower = document.getElementById('follower');
+    var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (!isTouch) {
+      document.addEventListener('mousemove', function(e) {
+        follower.style.left = e.clientX + 'px';
+        follower.style.top = e.clientY + 'px';
+        if (e.clientY > window.innerHeight - 120) {
+          follower.classList.remove('show');
+        }
+      });
+
+      document.querySelectorAll('.slide').forEach(function(s) {
+        s.addEventListener('mouseenter', function() {
+          follower.textContent = s.dataset.href || s.dataset.title;
+          follower.classList.add('show');
+        });
+        s.addEventListener('mouseleave', function() {
+          follower.classList.remove('show');
+        });
+      });
+    }
+
+    var wheelLocked = false;
+    var wheelAccum = 0;
+    var wheelTimer;
+
+    document.addEventListener('wheel', function(e) {
+      if (indexOpen || wheelLocked) return;
+
+      var delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+      wheelAccum += delta;
+
+      if (Math.abs(wheelAccum) >= 50) {
+        wheelAccum > 0 ? goTo(current + 1) : goTo(current - 1);
+        wheelAccum = 0;
+        wheelLocked = true;
+        setTimeout(function() { wheelLocked = false; }, 600);
+      }
+
+      clearTimeout(wheelTimer);
+      wheelTimer = setTimeout(function() { wheelAccum = 0; }, 150);
+    }, { passive: true });
+
+    function scaleEmbed() {
+      var iw = 1440;
+      var ih = 900;
+      var scale = Math.min(window.innerWidth / iw, (window.innerHeight - 38) / ih) * 0.56;
+      document.querySelectorAll('.slide-embed').forEach(function(s) {
+        s.style.setProperty('--embed-w', iw + 'px');
+        s.style.setProperty('--embed-h', ih + 'px');
+        s.style.setProperty('--embed-scale', scale);
+      });
+    }
+    scaleEmbed();
+
+    var resizeTimer;
+    window.addEventListener('resize', function() {
+      track.style.transition = 'none';
+      scaleEmbed();
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function() {
+        track.style.transition = '';
+      }, 150);
+    });
+  </script>
+
+</body>
+</html>
