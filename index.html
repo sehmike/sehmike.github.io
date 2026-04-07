@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michael Seh</title>
+<meta name="description" content="Michael Seh">
+<meta property="og:title" content="Michael Seh">
+<meta property="og:description" content="Michael Seh">
+<meta property="og:image" content="https://michaelseh.com/og-image.png">
+<meta property="og:url" content="https://michaelseh.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Michael Seh">
+<meta name="twitter:image" content="https://michaelseh.com/og-image.png">
+<link rel="icon" href="data:,">
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  #emailLink {
+    color: #0000EE;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  #emailLink.clicked {
+    color: purple;
+  }
+  noscript a {
+    color: purple;
+  }
+</style>
+</head>
+<body>
+
+<div id="main"><b>Michael Seh</b> &nbsp;[<span id="emailLink" onclick="copyEmail()">view email</span>]</div>
+
+<noscript>
+<style>#main{display:none}</style>
+<div><b>Michael Seh</b> &nbsp;[<a href="mailto:mail@michaelseh.com">mail@michaelseh.com</a>]</div>
+</noscript>
+
+<script>
+function copyEmail() {
+  var email = 'mail' + String.fromCharCode(64) + 'michaelseh.com';
+  var link = document.getElementById('emailLink');
+  var ta = document.createElement('textarea');
+  ta.value = email;
+  ta.setAttribute('readonly', '');
+  ta.style.position = 'absolute';
+  ta.style.left = '-9999px';
+  document.body.appendChild(ta);
+  ta.select();
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+  link.classList.add('clicked');
+  link.textContent = email + ' copied!';
+  setTimeout(function() {
+    link.textContent = 'view email';
+  }, 2000);
+}
+</script>
+
+</body>
+</html>
