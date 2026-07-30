@@ -30,11 +30,13 @@ h2 {
 
 p {
     font-family: "TeeFranklin-Book", Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     color: #444;
     font-size: 13px;
-    max-width: 65ch;   /* stops long lines spanning full width */
-    line-height: 1.6;  /* opens up the block */
-    margin: 0 0 1em;   /* space between paragraphs */
+    max-width: 65ch;
+    line-height: 1.8;
+    margin: 0 0 1.2em;
 }
 
 a {
