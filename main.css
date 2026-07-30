@@ -28,6 +28,15 @@ h2 {
     font-size: 13px;
 }
 
+p {
+    font-family: "TeeFranklin-Book", Helvetica, sans-serif;
+    color: #444;
+    font-size: 13px;
+    max-width: 65ch;   /* stops long lines spanning full width */
+    line-height: 1.6;  /* opens up the block */
+    margin: 0 0 1em;   /* space between paragraphs */
+}
+
 a {
     color: #ccc;
     text-decoration: none;
