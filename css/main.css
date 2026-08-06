@@ -1,0 +1,74 @@
+
+
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+}
+
+
+p {
+	font-family: 'Dirigible One', sans-serif;
+	margin: 0;
+	color: #0273CA;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+a.txt:link {color: #0273CA; text-decoration: none; overflow-wrap: anywhere; }
+a.txt:visited {color: #0273CA; text-decoration: none; }
+a.txt:hover {color: #0273CA; text-decoration: none; }
+a.txt:active {color: #0273CA; text-decoration: none; }
+
+
+/* The window is treated as a page: the text block sits high and inset,
+   with the widest margins at the outer and bottom edges (classical canon). */
+div.main {
+	box-sizing: border-box;
+	min-height: 100vh;
+	padding: 18vh 8vw 8vh 12vw;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Running text — a controlled measure, not a banner. */
+p.intro {
+	font-size: 30px;
+	line-height: 40px;
+	max-width: 13em;
+	hanging-punctuation: first last;
+}
+
+/* Contact steps down and settles into the bottom margin like a colophon. */
+p.contact {
+	margin-top: auto;
+	padding-top: 40px;
+	font-size: 22px;
+	line-height: 30px;
+}
+
+
+@media screen and (max-width: 640px) {
+
+	div.main {
+		padding: 12vh 8vw 8vh 8vw;
+	}
+	p.intro {
+		font-size: 24px;
+		line-height: 32px;
+		max-width: none;
+	}
+	p.contact {
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+
+@font-face {
+	font-family: 'Dirigible One';
+	src: url('../webfonts/DirigibleOne-Regular.woff2') format('woff2'),
+	     url('../webfonts/DirigibleOne-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+}

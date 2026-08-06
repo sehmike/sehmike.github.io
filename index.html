@@ -1,43 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="english">
-    <meta name="google-site-verification" content="DBu7YuebNyCox5Q7GwYcCVRQOqnqjzRZgYtz2mdvnD8">
-    <meta name="keywords" content="michael, seh, michael seh">
-    <meta name="author" content="Michael Seh">
-    <meta name="publisher" content="Michael Seh">
-    <meta name="copyright" content="Michael Seh">
-    <meta name="distribution" content="global">
-    <meta name="page-topic" content="Contemporary Art">
-    <meta name="siteinfo" content="http://michaelseh.com/">
-    <meta name="revisit-after" content="2 days">
-    <link rel="stylesheet" type="text/css" href="/main.css">
-    <title>Michael Seh</title>
-    <meta property="og:title" content="Michael Seh">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://michaelseh.com/">
-    <meta property="og:image" content="https://michaelseh.com/og-screenshot.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
+	<title>Michael Seh</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Michael Seh is a type designer based in Los Angeles, CA." />
+	<meta name="keywords" content="Type Design, Michael, Seh, Typography, Type, MichaelSeh, LA, Los Angeles" />
+	<meta name="author" content="Michael, Seh, MichaelSeh" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <h1>
-        <a href="mailto:mail@michaelseh.com" target="_blank">contact</a>
-        &emsp;&emsp;&emsp;
-        <a href="imprint">imprint</a>
-        &emsp;&emsp;&emsp;Michael Seh
-    </h1>
-    <h2>Hochschule f&#252;r Bildende K&#252;nste – St&#228;delschule 2022–2023.</h2>
-    <h2>University of California, Los Angeles (UCLA) 2018–2022.</h2>
 
-    <font color="#cccccc">
-        <a href="2">
-            <img src="Michael_Seh_01.jpg" width="283" height="400" border="1" hspace="11" alt="">
-        </a>
-    </font>
+
+<body>
+
+		<div class="main">
+
+				<p class="intro">I work as a leasing administrator. In my spare time I make fonts, including the one you&#8217;re reading now. My email is below if you&#8217;d like to get in touch.</p>
+
+				<p class="contact"><a class="txt" id="email" href="mailto:mail@michaelseh.com" data-email="mail@michaelseh.com">mail@michaelseh.com</a></p>
+
+		</div>
+
+	<script type="text/javascript">
+	(function () {
+		var link = document.getElementById('email');
+		if (!link) return;
+		var original = link.textContent;
+		var timer;
+		link.addEventListener('click', function (e) {
+			var email = link.getAttribute('data-email');
+			if (navigator.clipboard && navigator.clipboard.writeText) {
+				e.preventDefault();
+				navigator.clipboard.writeText(email).then(function () {
+					link.textContent = 'copied';
+					clearTimeout(timer);
+					timer = setTimeout(function () { link.textContent = original; }, 1500);
+				}).catch(function () {
+					window.location.href = 'mailto:' + email;
+				});
+			}
+			// no clipboard support: fall through to the mailto: href
+		});
+	})();
+	</script>
+
 </body>
 </html>
