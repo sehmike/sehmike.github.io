@@ -1,12 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
 	<title>Michael Seh</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="description" content="Michael Seh is a type designer based in Los Angeles, CA." />
 	<meta name="keywords" content="Type Design, Michael, Seh, Typography, Type, MichaelSeh, LA, Los Angeles" />
 	<meta name="author" content="Michael, Seh, MichaelSeh" />
 	<meta name="viewport" content="width=device-width">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://michaelseh.com/">
+	<meta property="og:title" content="Michael Seh">
+	<meta property="og:description" content="Michael Seh is a type designer based in Los Angeles, CA.">
+	<meta property="og:image" content="https://michaelseh.com/og-screenshot.png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Michael Seh">
+	<meta name="twitter:description" content="Michael Seh is a type designer based in Los Angeles, CA.">
+	<meta name="twitter:image" content="https://michaelseh.com/og-screenshot.png">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -15,32 +26,23 @@
 
 		<div class="main">
 
-				<p class="intro">I work as a leasing administrator. In my spare time I make fonts, including the one you&#8217;re reading now. My email is below if you&#8217;d like to get in touch.</p>
+				<p class="intro" id="intro" contenteditable="true" spellcheck="false">I work as a leasing administrator. In my spare time I make fonts, including the one you&#8217;re reading now. My email is below if you&#8217;d like to get in touch.</p>
 
-				<p class="contact"><a class="txt" id="email" href="mailto:mail@michaelseh.com" data-email="mail@michaelseh.com">mail@michaelseh.com</a></p>
+				<p class="contact"><a class="txt" href="mailto:mail@michaelseh.com">mail@michaelseh.com</a></p>
 
 		</div>
 
-	<script type="text/javascript">
+	<script>
 	(function () {
-		var link = document.getElementById('email');
-		if (!link) return;
-		var original = link.textContent;
-		var timer;
-		link.addEventListener('click', function (e) {
-			var email = link.getAttribute('data-email');
-			if (navigator.clipboard && navigator.clipboard.writeText) {
-				e.preventDefault();
-				navigator.clipboard.writeText(email).then(function () {
-					link.textContent = 'copied';
-					clearTimeout(timer);
-					timer = setTimeout(function () { link.textContent = original; }, 1500);
-				}).catch(function () {
-					window.location.href = 'mailto:' + email;
-				});
-			}
-			// no clipboard support: fall through to the mailto: href
-		});
+		var intro = document.getElementById('intro');
+		if (!intro) return;
+		intro.focus({ preventScroll: true });
+		var range = document.createRange();
+		range.selectNodeContents(intro);
+		range.collapse(false);
+		var sel = window.getSelection();
+		sel.removeAllRanges();
+		sel.addRange(range);
 	})();
 	</script>
 

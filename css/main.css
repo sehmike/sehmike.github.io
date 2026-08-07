@@ -20,8 +20,6 @@ a.txt:hover {color: #0273CA; text-decoration: none; }
 a.txt:active {color: #0273CA; text-decoration: none; }
 
 
-/* The window is treated as a page: the text block sits high and inset,
-   with the widest margins at the outer and bottom edges (classical canon). */
 div.main {
 	box-sizing: border-box;
 	min-height: 100vh;
@@ -30,15 +28,14 @@ div.main {
 	flex-direction: column;
 }
 
-/* Running text — a controlled measure, not a banner. */
 p.intro {
 	font-size: 30px;
 	line-height: 40px;
 	max-width: 13em;
 	hanging-punctuation: first last;
+	outline: none;
 }
 
-/* Contact steps down and settles into the bottom margin like a colophon. */
 p.contact {
 	margin-top: auto;
 	padding-top: 40px;
