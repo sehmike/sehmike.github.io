@@ -32,9 +32,9 @@ p.intro {
 	font-size: 30px;
 	line-height: 40px;
 	max-width: 13em;
-	hanging-punctuation: first last;
 	outline: none;
 	caret-color: #0273CA;
+	-webkit-tap-highlight-color: transparent;
 }
 
 p.contact {
